@@ -11,12 +11,12 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
 
   return (
     <div
-      className="flex items-center rounded-full border border-line bg-surface p-0.5 text-xs font-semibold"
+      className="flex shrink-0 items-center rounded-full border border-line bg-surface p-0.5 text-xs font-semibold"
       aria-label={locale === "nl" ? "Taal" : "Language"}
     >
       <Link
         href={swapLocalePath(pathname, "nl")}
-        className={`rounded-full px-2.5 py-1 ${
+        className={`inline-flex min-h-8 min-w-8 items-center justify-center rounded-full px-2.5 ${
           locale === "nl" ? "bg-ink text-on-ink" : "text-muted hover:text-ink"
         }`}
         hrefLang="nl"
@@ -25,7 +25,7 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
       </Link>
       <Link
         href={swapLocalePath(pathname, "en")}
-        className={`rounded-full px-2.5 py-1 ${
+        className={`inline-flex min-h-8 min-w-8 items-center justify-center rounded-full px-2.5 ${
           locale === "en" ? "bg-ink text-on-ink" : "text-muted hover:text-ink"
         }`}
         hrefLang="en"

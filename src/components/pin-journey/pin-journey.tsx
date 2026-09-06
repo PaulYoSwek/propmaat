@@ -3,13 +3,10 @@
 import { useEffect, useState } from "react";
 import { PropmaatPinImage } from "@/components/brand/propmaat-pin-image";
 import {
-  dropEase,
-  journeyEndY,
+  ensureIncreasing,
   pointAlong,
-  scrollProgress,
+  progressAlongStops,
 } from "@/lib/pin-progress";
-
-const LAND_AT = 0.75;
 
 function rectOf(id: string) {
   const el = document.getElementById(id);
@@ -27,6 +24,7 @@ export function PinJourney() {
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const desktop = window.matchMedia("(min-width: 1024px)");
     let frame = 0;
     let running = false;
 
@@ -38,29 +36,36 @@ export function PinJourney() {
       running = false;
       delete document.documentElement.dataset.pinJourney;
       setPose(null);
-      document.getElementById("propmaat-dossier")?.classList.remove("is-landed");
     };
 
     const tick = () => {
       const slot = rectOf("propmaat-pin-slot");
-      const target = rectOf("propmaat-pin-target");
+      const heading = rectOf("propmaat-pin-automation");
 
-      if (!slot || !target) {
+      if (!slot || !heading) {
         frame = window.requestAnimationFrame(tick);
         return;
       }
 
-      const startY = 0;
       const maxScroll = Math.max(
         0,
         document.documentElement.scrollHeight - window.innerHeight,
       );
-      const endY = journeyEndY(
-        target.top + window.scrollY,
-        window.innerHeight,
-        maxScroll,
+      const headingDocTop = heading.top + window.scrollY;
+      const headerOffset = 80;
+      const autoReady = Math.max(
+        1,
+        Math.min(headingDocTop - headerOffset, maxScroll),
       );
-      const progress = dropEase(scrollProgress(window.scrollY, startY, endY));
+      const autoEnter = Math.max(1, autoReady * 0.6);
+      const stops = ensureIncreasing([0, autoEnter], 80);
+      const progress = progressAlongStops(window.scrollY, stops);
+
+      const headingPoint = {
+        x: heading.left + heading.width / 2,
+        y: heading.bottom,
+        scale: heading.height,
+      };
 
       const next = pointAlong(progress, [
         {
@@ -68,18 +73,14 @@ export function PinJourney() {
           y: slot.bottom,
           scale: slot.height,
         },
-        {
-          x: target.left + target.width / 2,
-          y: target.top + target.height / 2,
-          scale: 44,
-        },
+        headingPoint,
       ]);
 
-      setPose({ ...next, visible: true });
-      document.documentElement.dataset.pinJourney = "on";
-      document
-        .getElementById("propmaat-dossier")
-        ?.classList.toggle("is-landed", progress >= LAND_AT);
+      const parkedAtHeading = progress >= 1;
+      const phase = parkedAtHeading ? "automation" : "travel";
+
+      document.documentElement.dataset.pinJourney = phase;
+      setPose({ ...next, visible: phase === "travel" });
 
       frame = window.requestAnimationFrame(tick);
     };
@@ -91,15 +92,17 @@ export function PinJourney() {
     };
 
     const sync = () => {
-      if (media.matches) stop();
+      if (media.matches || !desktop.matches) stop();
       else start();
     };
 
     sync();
     media.addEventListener("change", sync);
+    desktop.addEventListener("change", sync);
 
     return () => {
       media.removeEventListener("change", sync);
+      desktop.removeEventListener("change", sync);
       stop();
     };
   }, []);

@@ -8,7 +8,7 @@ export function Container({
   className?: string;
 }) {
   return (
-    <div className={`mx-auto w-full max-w-6xl px-5 sm:px-6 ${className}`}>
+    <div className={`mx-auto w-full max-w-6xl px-4 sm:px-6 ${className}`}>
       {children}
     </div>
   );
@@ -23,9 +23,9 @@ export function Eyebrow({ children }: { children: ReactNode }) {
 }
 
 export function primaryButtonClass(extra = "") {
-  return `inline-flex items-center justify-center rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-on-ink transition-colors hover:bg-accent-hover ${extra}`;
+  return `inline-flex min-h-11 items-center justify-center rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-on-ink transition-colors hover:bg-accent-hover ${extra}`;
 }
 
 export function secondaryButtonClass(extra = "") {
-  return `inline-flex items-center justify-center rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-accent/40 hover:bg-accent-soft/40 ${extra}`;
+  return `inline-flex min-h-11 items-center justify-center rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-accent/40 hover:bg-accent-soft/40 ${extra}`;
 }

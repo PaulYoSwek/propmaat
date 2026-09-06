@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Container } from "@/components/ui";
+import { LegalPage } from "@/components/legal-page";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 
@@ -26,10 +26,5 @@ export default async function PrivacyPage({
   if (!isLocale(locale)) notFound();
   const dict = getDictionary(locale);
 
-  return (
-    <Container className="max-w-2xl py-16 lg:py-20">
-      <h1 className="text-4xl font-semibold tracking-tight">{dict.privacy.title}</h1>
-      <p className="mt-6 text-base leading-relaxed text-muted">{dict.privacy.body}</p>
-    </Container>
-  );
+  return <LegalPage locale={locale} dict={dict} doc={dict.privacy} />;
 }

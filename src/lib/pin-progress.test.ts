@@ -1,9 +1,15 @@
 import { describe, expect, it } from "vitest";
 import {
   dropEase,
+  ensureIncreasing,
   journeyEndY,
+  journeyLandProgress,
+  journeyParked,
   pointAlong,
+  progressAlongStops,
   scrollProgress,
+  easeOutCubic,
+  smoothstep,
 } from "./pin-progress";
 
 describe("scrollProgress", () => {
@@ -58,6 +64,76 @@ describe("pointAlong", () => {
     ];
     expect(pointAlong(-1, waypoints)).toEqual({ x: 0, y: 0, scale: 1 });
     expect(pointAlong(2, waypoints)).toEqual({ x: 10, y: 0, scale: 2 });
+  });
+});
+
+describe("progressAlongStops", () => {
+  const stops = [0, 100, 200, 300];
+
+  it("stays at the first stop until you scroll", () => {
+    expect(progressAlongStops(-20, stops)).toBe(0);
+    expect(progressAlongStops(0, stops)).toBe(0);
+  });
+
+  it("reaches each stop at equal progress steps", () => {
+    expect(progressAlongStops(100, stops)).toBeCloseTo(1 / 3);
+    expect(progressAlongStops(200, stops)).toBeCloseTo(2 / 3);
+    expect(progressAlongStops(300, stops)).toBe(1);
+  });
+
+  it("interpolates between stops", () => {
+    expect(progressAlongStops(50, stops)).toBeCloseTo(1 / 6);
+  });
+
+  it("clamps past the last stop", () => {
+    expect(progressAlongStops(800, stops)).toBe(1);
+  });
+});
+
+describe("ensureIncreasing", () => {
+  it("pushes later stops forward when they collide", () => {
+    expect(ensureIncreasing([0, 10, 8, 40], 4)).toEqual([0, 10, 14, 40]);
+  });
+});
+
+describe("smoothstep", () => {
+  it("eases the midpoint", () => {
+    expect(smoothstep(0)).toBe(0);
+    expect(smoothstep(1)).toBe(1);
+    expect(smoothstep(0.5)).toBe(0.5);
+    expect(smoothstep(0.25)).toBeCloseTo(0.15625);
+  });
+});
+
+describe("journeyParked", () => {
+  it("parks once the eased landing has visually settled", () => {
+    expect(journeyParked(0.72, false)).toBe(false);
+    expect(journeyParked(0.73, false)).toBe(true);
+    expect(journeyParked(1, false)).toBe(true);
+  });
+
+  it("stays parked through small scroll-back so the landing does not bounce", () => {
+    expect(journeyParked(0.6, true)).toBe(true);
+    expect(journeyParked(0.51, true)).toBe(true);
+  });
+
+  it("releases only after scrolling back up through the travel range", () => {
+    expect(journeyParked(0.5, true)).toBe(false);
+    expect(journeyParked(0.2, true)).toBe(false);
+  });
+
+  it("lands on the target at the same moment it parks", () => {
+    expect(journeyLandProgress(0)).toBe(0);
+    expect(journeyLandProgress(0.73)).toBe(1);
+    expect(journeyLandProgress(1)).toBe(1);
+  });
+});
+
+describe("easeOutCubic", () => {
+  it("covers more ground early", () => {
+    expect(easeOutCubic(0)).toBe(0);
+    expect(easeOutCubic(1)).toBe(1);
+    expect(easeOutCubic(0.5)).toBeCloseTo(0.875);
   });
 });
 

@@ -1,20 +1,30 @@
-const PIN_RATIO = 55 / 92;
+import {
+  PROPMAAT_PIN_COLOR,
+  PROPMAAT_PIN_PATH,
+  PROPMAAT_PIN_RATIO,
+  PROPMAAT_PIN_VIEWBOX,
+} from "./propmaat-official-pin";
 
 export function PropmaatPinImage({
   height,
   className = "",
 }: {
-  height: number;
+  height?: number;
   className?: string;
 }) {
   return (
-    <img
-      src="/brand/pin.png"
-      alt=""
-      width={height * PIN_RATIO}
-      height={height}
-      className={`select-none ${className}`}
-      draggable={false}
-    />
+    <svg
+      aria-hidden
+      viewBox={PROPMAAT_PIN_VIEWBOX}
+      className={`propmaat-pin-image select-none ${className}`}
+      style={
+        height === undefined
+          ? undefined
+          : { width: height * PROPMAAT_PIN_RATIO, height }
+      }
+      preserveAspectRatio="xMidYMax meet"
+    >
+      <path fill={PROPMAAT_PIN_COLOR} fillRule="evenodd" d={PROPMAAT_PIN_PATH} />
+    </svg>
   );
 }

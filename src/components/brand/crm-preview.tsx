@@ -1,12 +1,41 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
 export function CrmPreview({ label }: { label: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const sync = () => {
+      if (media.matches) {
+        video.pause();
+        video.currentTime = 0;
+        return;
+      }
+      void video.play();
+    };
+
+    sync();
+    media.addEventListener("change", sync);
+    return () => media.removeEventListener("change", sync);
+  }, []);
+
   return (
-    <div className="crm-preview">
-      <img
-        src="/brand/crm-dossier.jpg"
-        alt={label}
-        className="crm-preview-image"
-        draggable={false}
+    <figure className="flow-video">
+      <video
+        ref={videoRef}
+        src="/brand/flow.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-label={label}
       />
-    </div>
+    </figure>
   );
 }

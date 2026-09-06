@@ -1,3 +1,5 @@
+import { cookiesNl, privacyNl, termsNl } from "./legal-nl";
+
 export const nl = {
   meta: {
     home: {
@@ -8,22 +10,42 @@ export const nl = {
     functies: {
       title: "Functies — Propmaat",
       description:
-        "Panden, publicatie, deals, klanten, inbox, agenda, DocuSign en virtuele inrichting. Alles wat je kantoor nodig heeft.",
+        "Panden, publicatie, deals, klanten, inbox, agenda, contracten en virtuele inrichting. Alles wat je kantoor nodig heeft.",
     },
     prijzen: {
-      title: "Prijzen — €50 per seat — Propmaat",
+      title: "Prijzen — vanaf €35 per seat — Propmaat",
       description:
-        "Eén plan: €50 per seat per maand. Alle modules inbegrepen. Vraag een demo om te starten.",
+        "Basis €35, Propmaat €50 per seat per maand, of op maat. Vraag een demo om te starten.",
     },
     contact: {
       title: "Vraag een demo — Propmaat",
       description:
-        "Plan een demo van Propmaat. We antwoorden per e-mail. Geen automatische inschrijving.",
+        "Plan een demo van Propmaat. Mail info@turboturtle.nl of bel +31 6 3496 5518. Geen automatische inschrijving.",
     },
     privacy: {
-      title: "Privacy — Propmaat",
+      title: "Privacyverklaring — Propmaat",
       description:
-        "Hoe Propmaat omgaat met gegevens uit het demoformulier.",
+        "Hoe Turbo Turtle BV persoonsgegevens verwerkt voor Propmaat, conform de AVG.",
+    },
+    cookies: {
+      title: "Cookieverklaring — Propmaat",
+      description:
+        "Welke cookies Propmaat zet en hoe je ze beheert.",
+    },
+    voorwaarden: {
+      title: "Algemene voorwaarden — Propmaat",
+      description:
+        "Voorwaarden voor de website, demo en het gebruik van Propmaat.",
+    },
+    stappen: {
+      title: "Aan de slag — Propmaat",
+      description:
+        "In drie stappen operationeel: demo, datamigratie, training en go-live.",
+    },
+    faq: {
+      title: "Veelgestelde vragen — Propmaat",
+      description:
+        "Antwoorden over prijs, seats, onboarding, Immoweb, WhatsApp en privacy.",
     },
   },
   brand: {
@@ -32,29 +54,117 @@ export const nl = {
   nav: {
     features: "Functies",
     pricing: "Prijzen",
+    steps: "Aan de slag",
+    faq: "FAQ",
     contact: "Contact",
     demo: "Vraag een demo",
     language: "Taal",
+    menu: "Menu",
+    close: "Sluit menu",
   },
   footer: {
     tagline: "Eén flow voor pand, deal en gesprek.",
-    privacy: "Privacy",
-    copyright: "© 2026 Propmaat",
+    privacy: "Privacyverklaring",
+    cookies: "Cookieverklaring",
+    terms: "Algemene voorwaarden",
+    legal: "Juridisch",
+    copyright: "© 2026 Turbo Turtle BV",
+    product: "Product",
+    company: "Kantoor",
+    region: "Voor makelaars in België en Nederland",
+    cta: "Vraag een demo",
+  },
+  legal: {
+    back: "← Terug naar home",
   },
   home: {
-    heroTitle: "Eén flow voor pand, deal en gesprek",
-    heroEyebrow: "Geautomatiseerd CRM voor makelaars",
+    heroTitle: "Het CRM dat het kantoorwerk overneemt",
+    heroEyebrow: "Voor makelaars in België en Nederland",
     heroSub:
-      "Panden, pipeline, attesten en elk gesprek — website, WhatsApp en mail — in één werkruimte.",
+      "Propmaat automatiseert het werk rondom je panden. Checklists, attesten en opvolging lopen vanzelf, mail, WhatsApp en je website zitten in dezelfde flow.",
+    heroWhy:
+      "Pand, deals en gesprekken staan op één plek. Geen overtypen, geen losse inboxen. Werkt je kantoor anders? Dan passen we de stappen aan.",
+    heroChannelsLead:
+      "Mail, WhatsApp en je website zitten in één automatische opvolging. Het gesprek met de klant blijft lopen, zonder losse inboxen.",
+    heroChannels: [
+      { id: "mail" as const, label: "Mail" },
+      { id: "whatsapp" as const, label: "WhatsApp" },
+      { id: "website" as const, label: "Website" },
+      { id: "agenda" as const, label: "Agenda" },
+      { id: "signing" as const, label: "Contracten" },
+    ],
     ctaDemo: "Vraag een demo",
-    ctaFeatures: "Bekijk functies",
     scrollHint: "Scroll",
-    productPreviewLabel: "Propmaat-dossier met pand, workflow en checklist",
-    mapLabel: "Kaart van België en Nederland",
-    mapEyebrow: "België & Nederland",
-    mapTitle: "Eén flow voor pand, deal en gesprek",
-    mapBody:
-      "Voor makelaars van Antwerpen tot Amsterdam. Panden, pipeline en elk gesprek — website, WhatsApp en mail — in één werkruimte.",
+    productPreviewLabel: "Propmaat-productvideo met dossier, workflow en checklist",
+    automationTitle: "Automation",
+    automationHeading: "Eén flow die je kantoorwerk versnelt",
+    automationLead:
+      "Propmaat versnelt de workflows van je kantoor. Mail, WhatsApp, website, agenda en contracten lopen in één flow, zodat je minder overtypt en minder najaagt.",
+    automationShotHint: "Screenshot volgt",
+    automationChannels: [
+      {
+        id: "mail" as const,
+        label: "Mail",
+        headline: "Mail landt in het dossier, niet in een losse inbox.",
+        body: "Inkomende berichten horen bij het pand of de deal. Je antwoordt met sjablonen, zonder overtypen naar een andere mailbox.",
+        shot: "/brand/automation-mail.webp",
+        shotAlt: "Mail-inbox met een conceptantwoord voor een bezichtiging",
+      },
+      {
+        id: "whatsapp" as const,
+        label: "WhatsApp",
+        headline: "WhatsApp in dezelfde flow — AI schrijft mee, stuurt nooit.",
+        body: "Gesprekken blijven bij de persoon en het dossier. Sjablonen helpen; AI mag een tekst herschrijven, maar verstuurt niets zelf.",
+        shot: "/brand/automation-whatsapp.webp",
+        shotAlt: "WhatsApp-inbox met gesprek, flow en conceptbericht",
+      },
+      {
+        id: "website" as const,
+        label: "Website",
+        headline: "Website-aanvragen worden werkvoorraad, geen mailbox-chaos.",
+        body: "Verkoop, schatting, zoekopdracht of bericht: het komt binnen als een open item. Je pakt het op via mail of WhatsApp, vanuit hetzelfde dossier.",
+        shot: "/brand/automation-website.webp",
+        shotAlt: "Website-inbox met openstaande aanvragen, types en antwoorden",
+      },
+      {
+        id: "agenda" as const,
+        label: "Agenda",
+        headline: "Een eigen planner: iedereen stemt, jij plant.",
+        body: "Koper, verkoper en het kantoor zien dezelfde voorstellen en stemmen op een tijdstip. Geen heen-en-weer mailen. Het gekozen moment landt in je agenda, bij het pand.",
+        shot: "/brand/automation-agenda.webp",
+        shotAlt: "Weekagenda met bezichtigingen, CRM-afspraken en gekoppelde kalender",
+      },
+      {
+        id: "signing" as const,
+        label: "Contracten",
+        headline: "Samen schrijven, geschiedenis bewaren, tekenen als het klopt.",
+        body: "Meerdere partijen werken in hetzelfde document. Elke wijziging blijft zichtbaar. Als iedereen tevreden is, teken je vanuit het dossier — geen versies meer heen-en-weer mailen.",
+        shot: "/brand/automation-signing.webp",
+        shotAlt: "Samenwerkingsdossier met document, reacties en tijdlijn",
+      },
+    ],
+    whyUsTitle: "Waarom Propmaat",
+    whyUsLead:
+      "Een algemeen CRM past zich aan vastgoed aan. Propmaat is ervoor gebouwd.",
+    whyUsBody:
+      "Pand, deal en gesprek staan op één plek. Checklists en opvolging lopen mee, zodat je kantoor minder overtypt en minder najaagt.",
+    whyUsPoints: [
+      {
+        icon: "workflow" as const,
+        title: "Snellere workflow",
+        body: "Attesten, publicatie en berichten horen bij het dossier. Je hoeft niet te schakelen tussen mailbox, chat en spreadsheet.",
+      },
+      {
+        icon: "followup" as const,
+        title: "Opvolging die blijft hangen",
+        body: "Elk gesprek blijft bij de persoon en het pand. Je ziet wie wacht, wat je beloofde, en wat de volgende stap is.",
+      },
+      {
+        icon: "people" as const,
+        title: "Klanten én prospecten",
+        body: "Leads groeien eerst op hun eigen bord. Wordt het ernst, dan is de fiche en het gesprek al mee.",
+      },
+    ],
     beats: [
       {
         title: "Het pand",
@@ -90,6 +200,11 @@ export const nl = {
     title: "Alles in één werkruimte",
     intro:
       "Propmaat dekt het pad van prospect tot ondertekening. Geen extra modules om later te kopen — dit is het product.",
+    catalogEyebrow: "Functies",
+    catalogTitle: "Alles wat het kantoor al doet, in één CRM",
+    catalogLead:
+      "Geen modulewinkel. Dit is het product: van panddossier tot ondertekening, inclusief de gesprekken eromheen.",
+    catalogCta: "Lees de uitleg per functie",
     custom: {
       title: "Op maat",
       body: "Propmaat kan workflows of functies toevoegen die bij jouw kantoor passen. Geen modulewinkel: we spreken scope en timing af in een demo.",
@@ -173,11 +288,11 @@ export const nl = {
       {
         id: "agenda",
         title: "Agenda & bezichtigingen",
-        body: "Kijkmomenten en afspraken horen bij het pand. Partijen stemmen via een link; jij bevestigt.",
+        body: "Een eigen planner hoort bij het pand. Koper, verkoper en het kantoor stemmen op een tijdstip; het gekozen moment landt in je agenda.",
         bullets: [
-          "Agenda gekoppeld aan je kalender",
-          "Reeksen bezichtigingen",
-          "Planningslinks waarop partijen stemmen",
+          "Planner waarop alle partijen stemmen",
+          "Gekozen slot in je gekoppelde agenda",
+          "Reeksen bezichtigingen bij het pand",
         ],
       },
       {
@@ -191,13 +306,13 @@ export const nl = {
         ],
       },
       {
-        id: "docusign",
-        title: "Ondertekenen",
-        body: "Verstuur een document ter ondertekening vanuit het kantoor. Status en getekende PDF blijven bij het dossier.",
+        id: "signing",
+        title: "Contracten",
+        body: "Meerdere partijen bewerken hetzelfde document. Elke wijziging blijft in de geschiedenis. Als iedereen tevreden is, teken je vanuit het dossier.",
         bullets: [
-          "DocuSign vanuit Propmaat",
-          "Status in een kantoorlijst",
-          "Getekende PDF bij het pand",
+          "Samen schrijven in één document",
+          "Geschiedenis van elke wijziging",
+          "Tekenen als iedereen akkoord is",
         ],
       },
       {
@@ -221,35 +336,354 @@ export const nl = {
         ],
       },
     ],
+    catalog: [
+      {
+        id: "dossier",
+        icon: "listing" as const,
+        title: "Panddossier",
+        body: "Elk object is een dossier met gegevens, status en wat nog moet.",
+      },
+      {
+        id: "media",
+        icon: "media" as const,
+        title: "Media en documenten",
+        body: "Foto’s, plannen en attesten blijven bij het pand.",
+      },
+      {
+        id: "checklist",
+        icon: "checklist" as const,
+        title: "Publicatiechecklist",
+        body: "Wat nog moet vóór je live gaat, in hetzelfde dossier.",
+      },
+      {
+        id: "attesten",
+        icon: "checklist" as const,
+        title: "Attesten en verplichtingen",
+        body: "Certificaten horen bij het object, niet in een losse map.",
+      },
+      {
+        id: "site-publish",
+        icon: "publish" as const,
+        title: "Publicatie naar je website",
+        body: "Zelfde bron als je kantoor. Geen overtypen naar een CMS.",
+      },
+      {
+        id: "immoweb",
+        icon: "publish" as const,
+        title: "Publicatie naar Immoweb",
+        body: "Doorzetten wanneer het dossier klaar is.",
+      },
+      {
+        id: "pipeline",
+        icon: "pipeline" as const,
+        title: "Deals-pipeline",
+        body: "Kanban per fase. Sleep een deal naar de volgende stap.",
+      },
+      {
+        id: "deal-file",
+        icon: "deal" as const,
+        title: "Deal-dossier",
+        body: "Taken, notities en berichten horen bij de deal.",
+      },
+      {
+        id: "tasks",
+        icon: "deal" as const,
+        title: "Taken en opvolging",
+        body: "Wat openstaat, in hetzelfde scherm als de deal.",
+      },
+      {
+        id: "prospects",
+        icon: "people" as const,
+        title: "Prospectenbord",
+        body: "Nieuwe leads groeien eerst op een eigen bord.",
+      },
+      {
+        id: "contacts",
+        icon: "people" as const,
+        title: "Klantenfiches",
+        body: "Contact met een tijdlijn, geen losse lijst.",
+      },
+      {
+        id: "search-profile",
+        icon: "search" as const,
+        title: "Zoekprofiel",
+        body: "Wat iemand zoekt, staat bij de persoon.",
+      },
+      {
+        id: "matching",
+        icon: "search" as const,
+        title: "Matching",
+        body: "Interesse koppelen aan passende panden.",
+      },
+      {
+        id: "web-leads",
+        icon: "inbox" as const,
+        title: "Website-leads",
+        body: "Aanvragen komen binnen als werkvoorraad, niet als mailbox-chaos.",
+      },
+      {
+        id: "whatsapp",
+        icon: "inbox" as const,
+        title: "WhatsApp-inbox",
+        body: "Gesprekken blijven bij de persoon en het dossier.",
+      },
+      {
+        id: "mail",
+        icon: "inbox" as const,
+        title: "Mail-inbox",
+        body: "Inkomende mail landt bij het pand of de deal.",
+      },
+      {
+        id: "templates",
+        icon: "inbox" as const,
+        title: "Berichtensjablonen",
+        body: "Antwoorden zonder elke keer opnieuw te beginnen.",
+      },
+      {
+        id: "ai",
+        icon: "spark" as const,
+        title: "AI bij formuleren",
+        body: "Herschrijft een tekst. Stuurt nooit zelf.",
+      },
+      {
+        id: "agenda",
+        icon: "calendar" as const,
+        title: "Agenda-koppeling",
+        body: "Afspraken naast je eigen kalender.",
+      },
+      {
+        id: "viewings",
+        icon: "calendar" as const,
+        title: "Bezichtigingen",
+        body: "Kijkmomenten horen bij het pand, niet bij een losse kalender.",
+      },
+      {
+        id: "planning",
+        icon: "calendar" as const,
+        title: "Planner met stemmen",
+        body: "Alle partijen stemmen op een tijdstip. Jij plant het gekozen moment.",
+      },
+      {
+        id: "decisions",
+        icon: "checklist" as const,
+        title: "Beslissingen",
+        body: "Openstaande acties uit mail, chat, planning en panden.",
+      },
+      {
+        id: "signing",
+        icon: "sign" as const,
+        title: "Contracten",
+        body: "Samen bewerken, geschiedenis bewaren, tekenen als het klopt.",
+      },
+      {
+        id: "staging",
+        icon: "staging" as const,
+        title: "Virtuele inrichting",
+        body: "Een lege kamerfoto omzetten in een ingerichte preview.",
+      },
+      {
+        id: "roles",
+        icon: "team" as const,
+        title: "Teamrollen",
+        body: "Rechten per module, eigen bereik of kantoorbreed.",
+      },
+      {
+        id: "locales",
+        icon: "language" as const,
+        title: "Nederlands en Engels",
+        body: "Het product in twee talen, voor het hele kantoor.",
+      },
+    ],
+  },
+  steps: {
+    eyebrow: "Hoe werkt het?",
+    title: "In 3 stappen operationeel",
+    lead: "Geen self-serve trial. We zetten het kantoor samen live.",
+    items: [
+      {
+        number: "01",
+        title: "Gratis demo",
+        body: "We tonen Propmaat en bespreken hoe jouw kantoor werkt. Vrijblijvend, geen automatische inschrijving.",
+      },
+      {
+        number: "02",
+        title: "Data migratie",
+        body: "We helpen panden, klanten en deals importeren vanuit Excel of je huidige software. Geen dataverlies.",
+      },
+      {
+        number: "03",
+        title: "Training & go-live",
+        body: "Persoonlijke training in het Nederlands of Engels. Je team is snel operationeel.",
+      },
+    ],
+  },
+  faq: {
+    eyebrow: "FAQ",
+    title: "Veelgestelde vragen",
+    lead: "Kort en concreet. Staat je vraag er niet bij, stel hem in de demo.",
+    items: [
+      {
+        q: "Voor wie is Propmaat?",
+        a: "Voor makelaarskantoren in België en Nederland die pand, deal en gesprek in één werkruimte willen. Geen algemeen CRM dat je later tot vastgoed ombouwt.",
+      },
+      {
+        q: "Wat is het verschil met een algemeen CRM?",
+        a: "Propmaat is gebouwd rond het dossier: attesten, publicatie, bezichtigingen en berichten horen bij het pand of de deal. Je hoeft mail, WhatsApp en spreadsheets niet zelf aan elkaar te knopen.",
+      },
+      {
+        q: "Hoeveel kost het?",
+        a: "Basis is €35 per gebruiker per maand. Propmaat, het volledige plan, is €50. Voor grotere teams of andere workflows maken we een offerte.",
+      },
+      {
+        q: "Wat is een seat?",
+        a: "Eén seat is één persoon met een login. Je betaalt per actieve gebruiker, niet per pand of per module.",
+      },
+      {
+        q: "Is er een gratis trial?",
+        a: "Nee. We starten met een demo, zodat je het product in jouw kantoor ziet. Daarna zetten we jullie live. Geen automatische inschrijving.",
+      },
+      {
+        q: "Hoe lang duurt het voor we operationeel zijn?",
+        a: "Na de demo plannen we migratie en training. Kleine kantoren zijn vaak binnen een week live. Grotere bestanden of extra workflows spreken we af in de demo.",
+      },
+      {
+        q: "Kunnen jullie onze data overzetten?",
+        a: "Ja. We helpen panden, klanten en deals importeren vanuit Excel of je huidige software. Scope en timing horen bij de onboarding.",
+      },
+      {
+        q: "Werkt het in België én Nederland?",
+        a: "Ja. Propmaat is gemaakt voor kantoren van Antwerpen tot Amsterdam. Het product is beschikbaar in het Nederlands en Engels.",
+      },
+      {
+        q: "Heb ik aparte accounts nodig voor WhatsApp, mail en Immoweb?",
+        a: "Ja. Die diensten vragen hun eigen accounts. Propmaat koppelt ze, zodat het werk in één flow blijft. Contracten schrijf en teken je in Propmaat.",
+      },
+      {
+        q: "Stuurt de AI zelf berichten naar klanten?",
+        a: "Nee. AI mag een tekst herschrijven. Versturen doe je zelf, vanuit de inbox.",
+      },
+      {
+        q: "Kunnen we workflows aanpassen?",
+        a: "Ja, op aanvraag. Werkt je kantoor anders, dan voegen we stappen of velden toe. Dat spreken we af in de demo, geen extra pakket uit een shop.",
+      },
+      {
+        q: "Hoe werken teamrollen?",
+        a: "Niet iedereen hoeft alles te zien. Rollen bepalen wie panden, deals of de inbox mag lezen en wijzigen — eigen records of kantoorbreed.",
+      },
+      {
+        q: "Publiceren we naar Immoweb én onze eigen site?",
+        a: "Ja. Je eigen website en Immoweb delen dezelfde bron. Foto’s en status zitten in één publicatiestroom.",
+      },
+      {
+        q: "Wat is virtuele inrichting?",
+        a: "Je zet een lege kamerfoto om in een ingerichte preview. Het resultaat bewaar je bij de pandmedia.",
+      },
+      {
+        q: "Werkt Propmaat voor verkoop én verhuur?",
+        a: "Het product is gebouwd rond pand, deal en gesprek — typisch voor verkoopkantoren. Verhuur in dezelfde dossiers bespreken we in de demo.",
+      },
+      {
+        q: "Hoe gaan jullie om met privacy?",
+        a: "Het demoformulier gebruiken we alleen om je aanvraag te beantwoorden. We verkopen die gegevens niet. Details staan in de privacyverklaring, cookieverklaring en algemene voorwaarden.",
+      },
+      {
+        q: "Wat als we meerdere vestigingen hebben?",
+        a: "Dat kan. Bereik en rollen stemmen we af op hoe het kantoor werkt. Grotere teams kunnen een offerte op maat krijgen.",
+      },
+      {
+        q: "Hoe starten we?",
+        a: "Vraag een demo. We lopen het product met je door, kijken naar je data, en plannen migratie en training. Geen self-serve checkout.",
+      },
+    ],
   },
   pricing: {
-    eyebrow: "Eén plan",
-    title: "€50 per seat per maand",
+    eyebrow: "Prijzen",
+    title: "Duidelijke seats, geen verborgen pakketten",
     subtitle:
       "Een seat is één persoon met een login. Je betaalt per actieve gebruiker.",
     cta: "Vraag een demo",
+    quoteCta: "Offerte aanvragen",
+    featuredBadge: "Meest gekozen",
+    priceSuffix: "/ gebruiker / maand",
     includedTitle: "Wat je krijgt",
     included: [
       "Onbeperkt panden, deals, klanten en website-leads",
       "Alle modules op de functies-pagina",
       "WhatsApp- en mail-inbox",
       "Publicatie naar je website en Immoweb",
-      "Agenda, bezichtigingen en planning",
-      "DocuSign",
+      "Agenda, bezichtigingen en een planner waarop partijen stemmen",
+      "Contracten: samen bewerken, geschiedenis en tekenen",
       "Virtuele inrichting",
       "Teamrollen en rechten",
       "Nederlands en Engels in het product",
       "Onboarding via een demo, geen self-serve trial",
     ],
-    note: "Immoweb, WhatsApp, mail en DocuSign vragen hun eigen accounts. Propmaat koppelt ze.",
+    plans: [
+      {
+        id: "basis",
+        name: "Basis",
+        subtitle: "Voor een klein kantoor dat wil starten",
+        price: "€35",
+        features: [
+          "Panden, deals en klanten",
+          "Mail-inbox",
+          "Website-leads",
+          "Agenda en bezichtigingen",
+          "Publicatie naar je website",
+          "Nederlands en Engels",
+        ],
+      },
+      {
+        id: "propmaat",
+        name: "Propmaat",
+        subtitle: "Het volledige kantoor, in één flow",
+        price: "€50",
+        featured: true,
+        features: [
+          "Alles uit Basis, plus:",
+          "WhatsApp-inbox",
+          "Publicatie naar Immoweb",
+          "Contracten en ondertekenen",
+          "Virtuele inrichting",
+          "Teamrollen en rechten",
+          "Onboarding via een demo",
+        ],
+      },
+      {
+        id: "custom",
+        name: "Op maat",
+        subtitle: "Voor kantoren die anders werken",
+        price: "Op maat",
+        priceNote: "Mogelijk korting bij een groter team",
+        quote: true,
+        features: [
+          "Alles uit Propmaat",
+          "Workflows op aanvraag",
+          "Extra velden of stappen",
+          "Persoonlijke onboarding",
+          "Afgestemd in de demo",
+        ],
+      },
+    ],
+    note: "Immoweb, WhatsApp en mail vragen hun eigen accounts. Propmaat koppelt ze.",
     customNote:
       "Workflows of functies op maat kunnen we toevoegen op aanvraag.",
   },
   contact: {
-    title: "Plan een demo",
-    body: "We antwoorden per e-mail. Er is geen automatische inschrijving.",
+    title: "Vraag een demo",
+    eyebrow: "Contact",
+    body: "We lopen Propmaat met je door, kijken hoe jouw kantoor werkt en plannen daarna migratie en training. We antwoorden per e-mail of telefoon. Er is geen automatische inschrijving.",
+    companyLine: "Propmaat is een product van Turbo Turtle BV, gevestigd in België.",
+    priceHint: "Prijzen starten bij €35 per seat per maand. Propmaat, het volledige plan, is €50.",
+    priceLink: "Bekijk de prijzen",
+    labels: {
+      email: "E-mail",
+      phone: "Telefoon",
+      location: "Vestiging",
+      vat: "BTW",
+    },
     successTitle: "Aanvraag verstuurd",
-    successBody: "Bedankt. We nemen contact op via het opgegeven e-mailadres.",
+    successBody: "Bedankt. We nemen contact op via het opgegeven e-mailadres of telefoonnummer.",
     submit: "Verstuur aanvraag",
     submitting: "Versturen…",
     fields: {
@@ -261,10 +695,9 @@ export const nl = {
       message: "Bericht (optioneel)",
     },
   },
-  privacy: {
-    title: "Privacy",
-    body: "Het demoformulier vraagt naam, kantoor, e-mail, optioneel telefoon, aantal seats en een bericht. We gebruiken die gegevens alleen om je aanvraag te beantwoorden. We verkopen ze niet. Ze blijven bewaard zolang de mailbox het bericht bewaart. Wil je gegevens laten verwijderen, gebruik dan opnieuw het contactformulier.",
-  },
+  privacy: privacyNl,
+  cookies: cookiesNl,
+  terms: termsNl,
   form: {
     errors: {
       invalid: "Controleer het formulier en probeer opnieuw.",

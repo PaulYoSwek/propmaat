@@ -15,7 +15,7 @@ export function PropmaatHeroMark() {
 
     const root = document.documentElement;
     const syncJourney = () => {
-      setShowPin(root.dataset.pinJourney !== "on" || media.matches);
+      setShowPin(!root.dataset.pinJourney || media.matches);
     };
     syncJourney();
     const observer = new MutationObserver(syncJourney);
@@ -31,28 +31,33 @@ export function PropmaatHeroMark() {
   }, []);
 
   return (
-    <div
-      className="propmaat-hero-mark flex items-end justify-center"
-      role="img"
-      aria-label="Propmaat"
-    >
-      <img
-        src="/brand/pr.png"
-        alt=""
-        className="propmaat-hero-pr select-none"
-        draggable={false}
-      />
+    <div className="propmaat-hero-mark" role="img" aria-label="Propmaat">
+      <span className="propmaat-hero-ch" data-k="Pr" aria-hidden>
+        P
+      </span>
+      <span className="propmaat-hero-ch" aria-hidden>
+        r
+      </span>
       <span id="propmaat-pin-slot" className="propmaat-hero-pin">
         {showPin || reduceMotion ? (
-          <PropmaatPinImage className="h-full w-full" height={92} />
+          <PropmaatPinImage className="h-full w-full" />
         ) : null}
       </span>
-      <img
-        src="/brand/pmaat.png"
-        alt=""
-        className="propmaat-hero-pmaat select-none"
-        draggable={false}
-      />
+      <span className="propmaat-hero-ch" data-k="pm" aria-hidden>
+        p
+      </span>
+      <span className="propmaat-hero-ch" data-k="ma" aria-hidden>
+        m
+      </span>
+      <span className="propmaat-hero-ch" data-k="aa" aria-hidden>
+        a
+      </span>
+      <span className="propmaat-hero-ch" data-k="at" aria-hidden>
+        a
+      </span>
+      <span className="propmaat-hero-ch" aria-hidden>
+        t
+      </span>
     </div>
   );
 }

@@ -3,24 +3,49 @@ export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "nl";
 export const localeCookie = "pf_locale";
 
-export type PathKey = "home" | "functies" | "prijzen" | "contact" | "privacy";
+export type PathKey =
+  | "home"
+  | "functies"
+  | "prijzen"
+  | "stappen"
+  | "faq"
+  | "contact"
+  | "privacy"
+  | "cookies"
+  | "voorwaarden";
 
 export const slugs: Record<Locale, Record<PathKey, string>> = {
   nl: {
     home: "",
     functies: "functies",
     prijzen: "prijzen",
+    stappen: "aan-de-slag",
+    faq: "faq",
     contact: "contact",
     privacy: "privacy",
+    cookies: "cookies",
+    voorwaarden: "voorwaarden",
   },
   en: {
     home: "",
     functies: "features",
     prijzen: "pricing",
+    stappen: "get-started",
+    faq: "faq",
     contact: "contact",
     privacy: "privacy",
+    cookies: "cookies",
+    voorwaarden: "terms",
   },
 };
+
+export const mainNavKeys = [
+  "functies",
+  "prijzen",
+  "stappen",
+  "faq",
+  "contact",
+] as const satisfies readonly PathKey[];
 
 export function isLocale(value: string): value is Locale {
   return locales.includes(value as Locale);
@@ -37,10 +62,11 @@ export function tryPathKey(pathname: string): PathKey | null {
     pathname.replace(/^\/en(?=\/|$)/, "").replace(/^\/nl(?=\/|$)/, "") || "/";
   const segment = stripped.replace(/^\//, "").split("/")[0] ?? "";
   if (!segment) return "home";
-  if (segment === "functies" || segment === "features") return "functies";
-  if (segment === "prijzen" || segment === "pricing") return "prijzen";
-  if (segment === "contact") return "contact";
-  if (segment === "privacy") return "privacy";
+  for (const locale of locales) {
+    for (const key of Object.keys(slugs[locale]) as PathKey[]) {
+      if (slugs[locale][key] === segment) return key;
+    }
+  }
   return null;
 }
 

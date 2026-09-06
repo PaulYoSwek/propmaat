@@ -16,6 +16,10 @@ describe("localizedPath", () => {
     expect(localizedPath("nl", "prijzen")).toBe("/prijzen");
     expect(localizedPath("nl", "contact")).toBe("/contact");
     expect(localizedPath("nl", "privacy")).toBe("/privacy");
+    expect(localizedPath("nl", "cookies")).toBe("/cookies");
+    expect(localizedPath("nl", "voorwaarden")).toBe("/voorwaarden");
+    expect(localizedPath("nl", "stappen")).toBe("/aan-de-slag");
+    expect(localizedPath("nl", "faq")).toBe("/faq");
   });
 
   it("prefixes English and uses English slugs", () => {
@@ -24,6 +28,10 @@ describe("localizedPath", () => {
     expect(localizedPath("en", "prijzen")).toBe("/en/pricing");
     expect(localizedPath("en", "contact")).toBe("/en/contact");
     expect(localizedPath("en", "privacy")).toBe("/en/privacy");
+    expect(localizedPath("en", "cookies")).toBe("/en/cookies");
+    expect(localizedPath("en", "voorwaarden")).toBe("/en/terms");
+    expect(localizedPath("en", "stappen")).toBe("/en/get-started");
+    expect(localizedPath("en", "faq")).toBe("/en/faq");
   });
 });
 
@@ -43,6 +51,11 @@ describe("swapLocalePath", () => {
     expect(swapLocalePath("/en/pricing", "nl")).toBe("/prijzen");
   });
 
+  it("swaps /aan-de-slag to /en/get-started and back", () => {
+    expect(swapLocalePath("/aan-de-slag", "en")).toBe("/en/get-started");
+    expect(swapLocalePath("/en/get-started", "nl")).toBe("/aan-de-slag");
+  });
+
   it("understands rewritten /nl and /en Dutch slugs", () => {
     expect(pathToKey("/nl/functies")).toBe("functies");
     expect(swapLocalePath("/en/functies", "nl")).toBe("/functies");
@@ -55,6 +68,10 @@ describe("internalPath", () => {
     expect(internalPath("nl", "/functies")).toBe("/nl/functies");
     expect(internalPath("en", "/en/features")).toBe("/en/functies");
     expect(internalPath("en", "/en/pricing")).toBe("/en/prijzen");
+    expect(internalPath("en", "/en/get-started")).toBe("/en/aan-de-slag");
+    expect(internalPath("en", "/en/faq")).toBe("/en/faq");
+    expect(internalPath("en", "/en/terms")).toBe("/en/voorwaarden");
+    expect(internalPath("en", "/en/cookies")).toBe("/en/cookies");
   });
 });
 
@@ -95,6 +112,21 @@ describe("resolveRequestPath", () => {
       action: "redirect",
       locale: "en",
       pathname: "/en/features",
+    });
+    expect(resolveRequestPath("/en/aan-de-slag")).toEqual({
+      action: "redirect",
+      locale: "en",
+      pathname: "/en/get-started",
+    });
+    expect(resolveRequestPath("/en/voorwaarden")).toEqual({
+      action: "redirect",
+      locale: "en",
+      pathname: "/en/terms",
+    });
+    expect(resolveRequestPath("/en/terms")).toEqual({
+      action: "rewrite",
+      locale: "en",
+      pathname: "/en/voorwaarden",
     });
   });
 });

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ContactDetails } from "@/components/contact-details";
 import { DemoForm } from "@/components/demo-form";
-import { Container } from "@/components/ui";
+import { Container, Eyebrow } from "@/components/ui";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 
@@ -34,20 +35,18 @@ export default async function ContactPage({
     Number.isInteger(parsed) && parsed >= 1 && parsed <= 99 ? parsed : 1;
 
   return (
-    <Container className="grid items-start gap-12 py-16 lg:grid-cols-2 lg:py-20">
-      <div>
-        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-          {dict.contact.title}
-        </h1>
-        <p className="mt-4 max-w-md text-lg leading-relaxed text-muted">
-          {dict.contact.body}
-        </p>
-        <p className="mt-8 text-3xl font-semibold tracking-tight">€50</p>
-        <p className="text-sm text-muted">
-          {locale === "nl" ? "per seat per maand" : "per seat per month"}
-        </p>
+    <Container className="py-12 sm:py-16 lg:py-20">
+      <Eyebrow>{dict.contact.eyebrow}</Eyebrow>
+      <h1 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+        {dict.contact.title}
+      </h1>
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+        {dict.contact.body}
+      </p>
+      <div className="mt-10 grid items-start gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-12">
+        <ContactDetails locale={locale} dict={dict} />
+        <DemoForm locale={locale} dict={dict} defaultSeats={defaultSeats} />
       </div>
-      <DemoForm locale={locale} dict={dict} defaultSeats={defaultSeats} />
     </Container>
   );
 }

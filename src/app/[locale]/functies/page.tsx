@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { FeaturesCatalog } from "@/components/brand/features-catalog";
 import { FeatureMock } from "@/components/mocks/product-mocks";
 import { Container, Eyebrow } from "@/components/ui";
 import { isLocale } from "@/i18n/config";
@@ -29,16 +30,26 @@ export default async function FeaturesPage({
   const custom = dict.features.custom;
 
   return (
-    <Container className="py-16 lg:py-20">
+    <>
+    <Container className="py-12 sm:py-16 lg:py-20">
       <Eyebrow>{dict.brand.name}</Eyebrow>
-      <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
+      <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
         {dict.features.title}
       </h1>
-      <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
         {dict.features.intro}
       </p>
+    </Container>
 
-      <div className="mt-16 space-y-20">
+    <FeaturesCatalog
+      eyebrow={dict.features.catalogEyebrow}
+      title={dict.features.catalogTitle}
+      lead={dict.features.catalogLead}
+      items={dict.features.catalog}
+    />
+
+    <Container className="pb-16 lg:pb-20">
+      <div className="space-y-20">
         {dict.features.sections.map((section, index) => (
           <article
             key={section.id}
@@ -97,5 +108,6 @@ export default async function FeaturesPage({
         </article>
       </div>
     </Container>
+    </>
   );
 }

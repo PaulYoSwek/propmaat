@@ -66,7 +66,7 @@ export function DemoForm({ locale, dict, defaultSeats = 1 }: Props) {
   }
 
   const inputClass =
-    "mt-1.5 w-full rounded-xl border border-line bg-background px-3 py-2.5 text-sm outline-none transition-shadow focus:border-accent focus:ring-2 focus:ring-accent/20";
+    "mt-1.5 w-full rounded-xl border border-line bg-background px-3 py-3 text-base outline-none transition-shadow focus:border-accent focus:ring-2 focus:ring-accent/20 sm:py-2.5 sm:text-sm";
 
   return (
     <form onSubmit={onSubmit} className="relative rounded-2xl border border-line bg-surface p-6 sm:p-8">

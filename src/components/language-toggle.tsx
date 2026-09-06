@@ -1,0 +1,38 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import type { Locale } from "@/i18n/config";
+import { swapLocalePath } from "@/i18n/config";
+
+export function LanguageToggle({ locale }: { locale: Locale }) {
+  const pathname = usePathname() || "/";
+  const other: Locale = locale === "nl" ? "en" : "nl";
+
+  return (
+    <div
+      className="flex items-center rounded-full border border-line bg-surface p-0.5 text-xs font-semibold"
+      aria-label={locale === "nl" ? "Taal" : "Language"}
+    >
+      <Link
+        href={swapLocalePath(pathname, "nl")}
+        className={`rounded-full px-2.5 py-1 ${
+          locale === "nl" ? "bg-ink text-white" : "text-muted hover:text-ink"
+        }`}
+        hrefLang="nl"
+      >
+        NL
+      </Link>
+      <Link
+        href={swapLocalePath(pathname, "en")}
+        className={`rounded-full px-2.5 py-1 ${
+          locale === "en" ? "bg-ink text-white" : "text-muted hover:text-ink"
+        }`}
+        hrefLang="en"
+      >
+        EN
+      </Link>
+      <span className="sr-only">{other.toUpperCase()}</span>
+    </div>
+  );
+}

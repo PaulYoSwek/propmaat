@@ -39,7 +39,7 @@ export default async function PricingPage({
       </div>
 
       <div className="mx-auto mt-12 max-w-xl rounded-3xl border border-line bg-surface p-8 shadow-[0_24px_60px_-32px_rgba(18,20,26,0.35)]">
-        <p className="text-sm font-semibold text-accent">PandFlow</p>
+        <p className="text-sm font-semibold text-accent">{dict.brand.name}</p>
         <p className="mt-2 text-5xl font-semibold tracking-tight">€50</p>
         <p className="mt-1 text-sm text-muted">
           {locale === "nl" ? "per seat / maand" : "per seat / month"}
@@ -55,6 +55,9 @@ export default async function PricingPage({
             </li>
           ))}
         </ul>
+        <p className="mt-6 text-sm leading-relaxed text-ink">
+          {pricing.customNote}
+        </p>
         <Link
           href={localizedPath(locale, "contact")}
           className={primaryButtonClass("mt-8 w-full")}

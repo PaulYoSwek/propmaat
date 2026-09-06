@@ -1,30 +1,33 @@
 export const nl = {
   meta: {
     home: {
-      title: "PandFlow — Eén flow voor pand, deal en gesprek",
+      title: "Propmaat — Eén flow voor pand, deal en gesprek",
       description:
         "CRM voor makelaars in België en Nederland. Panden, deals, WhatsApp, mail en publicatie in één werkruimte. €50 per seat per maand.",
     },
     functies: {
-      title: "Functies — PandFlow",
+      title: "Functies — Propmaat",
       description:
         "Panden, publicatie, deals, klanten, inbox, agenda, DocuSign en virtuele inrichting. Alles wat je kantoor nodig heeft.",
     },
     prijzen: {
-      title: "Prijzen — €50 per seat — PandFlow",
+      title: "Prijzen — €50 per seat — Propmaat",
       description:
         "Eén plan: €50 per seat per maand. Alle modules inbegrepen. Vraag een demo om te starten.",
     },
     contact: {
-      title: "Vraag een demo — PandFlow",
+      title: "Vraag een demo — Propmaat",
       description:
-        "Plan een demo van PandFlow. We antwoorden per e-mail. Geen automatische inschrijving.",
+        "Plan een demo van Propmaat. We antwoorden per e-mail. Geen automatische inschrijving.",
     },
     privacy: {
-      title: "Privacy — PandFlow",
+      title: "Privacy — Propmaat",
       description:
-        "Hoe PandFlow omgaat met gegevens uit het demoformulier.",
+        "Hoe Propmaat omgaat met gegevens uit het demoformulier.",
     },
+  },
+  brand: {
+    name: "Propmaat",
   },
   nav: {
     features: "Functies",
@@ -36,51 +39,58 @@ export const nl = {
   footer: {
     tagline: "Eén flow voor pand, deal en gesprek.",
     privacy: "Privacy",
-    copyright: "© 2026 PandFlow",
+    copyright: "© 2026 Propmaat",
   },
   home: {
     heroTitle: "Eén flow voor pand, deal en gesprek",
     heroSub:
-      "PandFlow is de werkruimte voor makelaars. Panden, pipeline en elk gesprek — website, WhatsApp en mail — in één systeem.",
+      "Propmaat is de werkruimte voor makelaars. Panden, pipeline en elk gesprek — website, WhatsApp en mail — in één systeem.",
     ctaDemo: "Vraag een demo",
     ctaFeatures: "Bekijk functies",
-    highlightsEyebrow: "In één blik",
-    highlightsTitle: "Van dossier tot gesprek, zonder wisselen van tool",
-    highlights: [
+    beats: [
       {
-        title: "Panden",
-        body: "Volledige dossiers: gegevens, media en een checklist voor je live gaat.",
+        title: "Het pand",
+        body: "Elk object is een dossier: gegevens, media en een checklist vóór je live gaat.",
       },
       {
-        title: "Deals",
-        body: "Een kanban-pipeline waarin elke deal een eigen dossier heeft.",
+        title: "De deal",
+        body: "Een pipeline waarin elke deal een eigen dossier heeft.",
       },
       {
-        title: "Inbox",
-        body: "Website-leads, WhatsApp en mail op één plek, klaar om te beantwoorden.",
-      },
-      {
-        title: "Publicatie",
-        body: "Zet een pand live op je eigen site en stuur het door naar Immoweb.",
+        title: "Het gesprek",
+        body: "Website-leads, WhatsApp en mail op één plek.",
       },
     ],
-    whoEyebrow: "Voor wie",
-    whoTitle: "Voor kantoren die één systeem willen",
-    whoBody:
-      "Gebouwd voor zelfstandige makelaars en kleine teams in België en Nederland. Geen losse spreadsheets, geen tweede inbox, geen kopieerwerk tussen tools.",
+    landingEyebrow: "Voorbeeld in het product",
+    landingAddress: "Keizerstraat 18, 2000 Antwerpen",
+    landingPrice: "€ 649.000",
+    landingStatus: "Te koop",
+    landingBeds: "4 slpk",
+    customTitle: "Jouw kantoor, jouw flow",
+    customBody:
+      "Propmaat dekt het pad van prospect tot ondertekening. Werkt je kantoor anders, dan voegen we workflows of functies toe op aanvraag. Dat spreken we af in een demo — geen catalogus van extra pakketten.",
     priceEyebrow: "Prijs",
     priceTitle: "€50 per seat per maand",
     priceBody:
       "Eén seat is één login. Alle modules erin, geen verborgen pakketten. Bekijk wat je krijgt.",
     priceCta: "Naar prijzen",
-    finalTitle: "Zie PandFlow in je kantoor",
+    finalTitle: "Zie Propmaat in je kantoor",
     finalBody:
       "We lopen het product met je door. Geen automatische trial, wel een gerichte demo.",
   },
   features: {
     title: "Alles in één werkruimte",
     intro:
-      "PandFlow dekt het pad van prospect tot ondertekening. Geen extra modules om later te kopen — dit is het product.",
+      "Propmaat dekt het pad van prospect tot ondertekening. Geen extra modules om later te kopen — dit is het product.",
+    custom: {
+      title: "Op maat",
+      body: "Propmaat kan workflows of functies toevoegen die bij jouw kantoor passen. Geen modulewinkel: we spreken scope en timing af in een demo.",
+      bullets: [
+        "Workflows die aansluiten op hoe je kantoor al werkt",
+        "Extra velden of stappen op aanvraag",
+        "Afgestemd in de demo, geen extra pakket om te kopen",
+      ],
+    },
     sections: [
       {
         id: "panden",
@@ -125,7 +135,7 @@ export const nl = {
       {
         id: "klanten",
         title: "Klanten",
-        body: "Contacten met een zoekprofiel. PandFlow koppelt interesse aan passende panden, zodat matching geen losse lijst is.",
+        body: "Contacten met een zoekprofiel. Propmaat koppelt interesse aan passende panden, zodat matching geen losse lijst is.",
         bullets: [
           "Contactfiche met tijdlijn",
           "Zoekprofiel per klant",
@@ -177,7 +187,7 @@ export const nl = {
         title: "Ondertekenen",
         body: "Verstuur een document ter ondertekening vanuit het kantoor. Status en getekende PDF blijven bij het dossier.",
         bullets: [
-          "DocuSign vanuit PandFlow",
+          "DocuSign vanuit Propmaat",
           "Status in een kantoorlijst",
           "Getekende PDF bij het pand",
         ],
@@ -223,7 +233,9 @@ export const nl = {
       "Nederlands en Engels in het product",
       "Onboarding via een demo, geen self-serve trial",
     ],
-    note: "Immoweb, WhatsApp, mail en DocuSign vragen hun eigen accounts. PandFlow koppelt ze.",
+    note: "Immoweb, WhatsApp, mail en DocuSign vragen hun eigen accounts. Propmaat koppelt ze.",
+    customNote:
+      "Workflows of functies op maat kunnen we toevoegen op aanvraag.",
   },
   contact: {
     title: "Plan een demo",

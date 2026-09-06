@@ -3,29 +3,32 @@ import type { Dictionary } from "./nl";
 export const en: Dictionary = {
   meta: {
     home: {
-      title: "PandFlow — One flow for listings, deals, and conversations",
+      title: "Propmaat — One flow for listings, deals, and conversations",
       description:
         "CRM for estate agents in Belgium and the Netherlands. Listings, deals, WhatsApp, email, and publishing in one workspace. €50 per seat per month.",
     },
     functies: {
-      title: "Features — PandFlow",
+      title: "Features — Propmaat",
       description:
         "Listings, publishing, deals, contacts, inbox, calendar, DocuSign, and virtual staging. Everything your office needs.",
     },
     prijzen: {
-      title: "Pricing — €50 per seat — PandFlow",
+      title: "Pricing — €50 per seat — Propmaat",
       description:
         "One plan: €50 per seat per month. Every module included. Request a demo to get started.",
     },
     contact: {
-      title: "Request a demo — PandFlow",
+      title: "Request a demo — Propmaat",
       description:
-        "Book a PandFlow demo. We reply by email. No automated signup.",
+        "Book a Propmaat demo. We reply by email. No automated signup.",
     },
     privacy: {
-      title: "Privacy — PandFlow",
-      description: "How PandFlow handles data from the demo form.",
+      title: "Privacy — Propmaat",
+      description: "How Propmaat handles data from the demo form.",
     },
+  },
+  brand: {
+    name: "Propmaat",
   },
   nav: {
     features: "Features",
@@ -37,51 +40,58 @@ export const en: Dictionary = {
   footer: {
     tagline: "One flow for listings, deals, and conversations.",
     privacy: "Privacy",
-    copyright: "© 2026 PandFlow",
+    copyright: "© 2026 Propmaat",
   },
   home: {
     heroTitle: "One flow for listings, deals, and conversations",
     heroSub:
-      "PandFlow is the workspace for estate agents. Listings, pipeline, and every conversation — website, WhatsApp, and email — in one system.",
+      "Propmaat is the workspace for estate agents. Listings, pipeline, and every conversation — website, WhatsApp, and email — in one system.",
     ctaDemo: "Request a demo",
     ctaFeatures: "See features",
-    highlightsEyebrow: "At a glance",
-    highlightsTitle: "From dossier to conversation, without switching tools",
-    highlights: [
+    beats: [
       {
-        title: "Listings",
-        body: "Full property files: details, media, and a checklist before you go live.",
+        title: "The listing",
+        body: "Every property is a dossier: details, media, and a checklist before you go live.",
       },
       {
-        title: "Deals",
-        body: "A kanban pipeline where every deal has its own dossier.",
+        title: "The deal",
+        body: "A pipeline where every deal has its own dossier.",
       },
       {
-        title: "Inbox",
-        body: "Website leads, WhatsApp, and email in one place, ready to answer.",
-      },
-      {
-        title: "Publishing",
-        body: "Put a listing live on your own site and push it to Immoweb.",
+        title: "The conversation",
+        body: "Website leads, WhatsApp, and email in one place.",
       },
     ],
-    whoEyebrow: "Who it’s for",
-    whoTitle: "For offices that want one system",
-    whoBody:
-      "Built for independent agents and small teams in Belgium and the Netherlands. No leftover spreadsheets, no second inbox, no copying between tools.",
+    landingEyebrow: "Sample from the product",
+    landingAddress: "Keizerstraat 18, 2000 Antwerp",
+    landingPrice: "€ 649,000",
+    landingStatus: "For sale",
+    landingBeds: "4 bed",
+    customTitle: "Your office, your flow",
+    customBody:
+      "Propmaat covers the path from prospect to signature. If your office works differently, we add workflows or features on request. We scope that in a demo — not a catalog of add-on packs.",
     priceEyebrow: "Price",
     priceTitle: "€50 per seat per month",
     priceBody:
       "One seat is one login. Every module included, no hidden packs. See what you get.",
     priceCta: "View pricing",
-    finalTitle: "See PandFlow in your office",
+    finalTitle: "See Propmaat in your office",
     finalBody:
       "We’ll walk the product with you. No automated trial — a focused demo.",
   },
   features: {
     title: "Everything in one workspace",
     intro:
-      "PandFlow covers the path from prospect to signature. No add-on modules to buy later — this is the product.",
+      "Propmaat covers the path from prospect to signature. No add-on modules to buy later — this is the product.",
+    custom: {
+      title: "Built to fit",
+      body: "Propmaat can add workflows or features that fit your office. Not a module shop: we agree scope and timing in a demo.",
+      bullets: [
+        "Workflows that match how your office already works",
+        "Extra fields or steps on request",
+        "Scoped in the demo, not sold as an add-on pack",
+      ],
+    },
     sections: [
       {
         id: "panden",
@@ -126,7 +136,7 @@ export const en: Dictionary = {
       {
         id: "klanten",
         title: "Contacts",
-        body: "People with a search profile. PandFlow matches interest to listings, so matching isn’t a side list.",
+        body: "People with a search profile. Propmaat matches interest to listings, so matching isn’t a side list.",
         bullets: [
           "Contact file with a timeline",
           "A search profile per client",
@@ -178,7 +188,7 @@ export const en: Dictionary = {
         title: "Signing",
         body: "Send a document for signature from the office. Status and the signed PDF stay with the file.",
         bullets: [
-          "DocuSign from PandFlow",
+          "DocuSign from Propmaat",
           "Status in an office list",
           "Signed PDF on the listing",
         ],
@@ -224,7 +234,8 @@ export const en: Dictionary = {
       "Dutch and English in the product",
       "Onboarding through a demo, no self-serve trial",
     ],
-    note: "Immoweb, WhatsApp, email, and DocuSign need their own accounts. PandFlow connects them.",
+    note: "Immoweb, WhatsApp, email, and DocuSign need their own accounts. Propmaat connects them.",
+    customNote: "Custom workflows or features can be added on request.",
   },
   contact: {
     title: "Book a demo",

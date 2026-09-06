@@ -16,6 +16,8 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000). English lives under `/en`.
 
+Live site: [https://propmaat.vercel.app](https://propmaat.vercel.app).
+
 ## Demo form email
 
 Set these in `.env.local` to forward demo requests:

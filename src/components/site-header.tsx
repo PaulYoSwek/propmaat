@@ -16,7 +16,11 @@ export function SiteHeader({
   return (
     <header className="sticky top-0 z-40 border-b border-line/80 bg-background/80 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between gap-4">
-        <Link href={localizedPath(locale, "home")} className="text-ink">
+        <Link
+          href={localizedPath(locale, "home")}
+          className="text-ink"
+          aria-label="Propmaat"
+        >
           <PropmaatWordmark />
         </Link>
         <nav className="hidden items-center gap-7 text-sm font-medium text-muted md:flex">

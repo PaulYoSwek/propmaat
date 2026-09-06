@@ -14,6 +14,24 @@ export function scrollProgress(
   return Math.min(1, Math.max(0, t));
 }
 
+export function journeyEndY(
+  targetDocumentTop: number,
+  viewportHeight: number,
+  maxScroll: number,
+  viewOffset = 0.42,
+): number {
+  if (maxScroll <= 1) return 1;
+  const preferred = targetDocumentTop - viewportHeight * viewOffset;
+  return Math.max(1, Math.min(preferred, maxScroll));
+}
+
+export function dropEase(progress: number): number {
+  const t = Math.min(1, Math.max(0, progress));
+  if (t <= 0.1) return 0;
+  const u = (t - 0.1) / 0.9;
+  return u * u;
+}
+
 export function pointAlong(
   progress: number,
   waypoints: Waypoint[],

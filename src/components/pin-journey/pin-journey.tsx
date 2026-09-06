@@ -1,20 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { PropmaatPin } from "@/components/brand/propmaat-pin";
-import { pointAlong, scrollProgress, type Waypoint } from "@/lib/pin-progress";
+import { PropmaatPinImage } from "@/components/brand/propmaat-pin-image";
+import {
+  dropEase,
+  journeyEndY,
+  pointAlong,
+  scrollProgress,
+} from "@/lib/pin-progress";
 
-const BEAT_IDS = ["pin-beat-0", "pin-beat-1", "pin-beat-2"] as const;
-const LAND_AT = 0.92;
+const LAND_AT = 0.75;
 
-function centerOf(id: string): Waypoint | null {
+function rectOf(id: string) {
   const el = document.getElementById(id);
   if (!el) return null;
-  const rect = el.getBoundingClientRect();
-  return {
-    x: rect.left + rect.width / 2,
-    y: rect.top + rect.height / 2,
-  };
+  return el.getBoundingClientRect();
 }
 
 export function PinJourney() {
@@ -42,37 +42,44 @@ export function PinJourney() {
     };
 
     const tick = () => {
-      const slot = centerOf("propmaat-pin-slot");
-      const house = centerOf("propmaat-pin-target");
-      const beats = BEAT_IDS.map((id) => {
-        const point = centerOf(id);
-        return point ? { ...point, scale: 1.35 } : null;
-      });
+      const slot = rectOf("propmaat-pin-slot");
+      const target = rectOf("propmaat-pin-target");
 
-      if (!slot || !house || beats.some((b) => b === null)) {
+      if (!slot || !target) {
         frame = window.requestAnimationFrame(tick);
         return;
       }
 
-      const houseDocY = house.y + window.scrollY;
-      const progress = scrollProgress(
-        window.scrollY,
+      const startY = 0;
+      const maxScroll = Math.max(
         0,
-        Math.max(1, houseDocY - window.innerHeight * 0.42),
+        document.documentElement.scrollHeight - window.innerHeight,
       );
+      const endY = journeyEndY(
+        target.top + window.scrollY,
+        window.innerHeight,
+        maxScroll,
+      );
+      const progress = dropEase(scrollProgress(window.scrollY, startY, endY));
 
-      const waypoints: Waypoint[] = [
-        { x: slot.x, y: slot.y, scale: 1 },
-        ...(beats as Waypoint[]),
-        { x: house.x, y: house.y - 28, scale: 1.15 },
-      ];
+      const next = pointAlong(progress, [
+        {
+          x: slot.left + slot.width / 2,
+          y: slot.bottom,
+          scale: slot.height,
+        },
+        {
+          x: target.left + target.width / 2,
+          y: target.top + target.height / 2,
+          scale: 44,
+        },
+      ]);
 
-      const next = pointAlong(progress, waypoints);
       setPose({ ...next, visible: true });
       document.documentElement.dataset.pinJourney = "on";
-
-      const dossier = document.getElementById("propmaat-dossier");
-      dossier?.classList.toggle("is-landed", progress >= LAND_AT);
+      document
+        .getElementById("propmaat-dossier")
+        ?.classList.toggle("is-landed", progress >= LAND_AT);
 
       frame = window.requestAnimationFrame(tick);
     };
@@ -84,11 +91,8 @@ export function PinJourney() {
     };
 
     const sync = () => {
-      if (media.matches) {
-        stop();
-      } else {
-        start();
-      }
+      if (media.matches) stop();
+      else start();
     };
 
     sync();
@@ -104,15 +108,15 @@ export function PinJourney() {
 
   return (
     <div
-      className="pointer-events-none fixed z-50 text-ink"
+      className="pointer-events-none fixed z-50"
       style={{
         left: pose.x,
         top: pose.y,
-        transform: `translate(-50%, -100%) scale(${pose.scale})`,
+        transform: "translate(-50%, -100%)",
       }}
       aria-hidden
     >
-      <PropmaatPin size={22} />
+      <PropmaatPinImage height={Math.max(18, pose.scale)} />
     </div>
   );
 }

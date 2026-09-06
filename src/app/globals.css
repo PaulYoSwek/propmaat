@@ -60,17 +60,76 @@ body {
   animation-delay: 240ms;
 }
 
-#propmaat-dossier {
-  opacity: 0;
-  transform: translateY(16px);
-  transition:
-    opacity 300ms ease,
-    transform 300ms ease;
+.propmaat-hero-mark {
+  --lockup-w: min(92vw, 70rem);
+  --mark: min(15.5rem, 28vh, calc(var(--lockup-w) * 135 / 926));
+  width: max-content;
+  max-width: var(--lockup-w);
 }
 
-#propmaat-dossier.is-landed {
+.propmaat-hero-pr,
+.propmaat-hero-pin,
+.propmaat-hero-pmaat {
+  flex-shrink: 0;
+}
+
+.propmaat-hero-pr {
+  height: calc(var(--mark) * 111 / 135);
+  width: auto;
+  margin-bottom: calc(var(--mark) * 26 / 135);
+}
+
+.propmaat-hero-pin {
+  display: inline-flex;
+  width: calc(var(--mark) * 55 / 135);
+  min-width: calc(var(--mark) * 55 / 135);
+  height: calc(var(--mark) * 92 / 135);
+  margin: 0 calc(var(--mark) * 4 / 135) calc(var(--mark) * 8 / 135);
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.propmaat-hero-pmaat {
+  height: var(--mark);
+  width: auto;
+}
+
+.crm-preview {
+  position: relative;
+  width: min(92vw, 64rem);
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-bottom: 0;
+  border-radius: 1.35rem 1.35rem 0 0;
+  background: var(--color-surface);
+  box-shadow: 0 28px 80px rgb(45 45 45 / 8%);
+}
+
+.crm-preview::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 46%;
+  background: linear-gradient(
+    180deg,
+    rgb(247 244 238 / 0%) 0%,
+    var(--background) 100%
+  );
+  content: "";
+  pointer-events: none;
+}
+
+.crm-preview-image {
+  display: block;
+  width: 128%;
+  max-width: none;
+  height: min(36vh, 22rem);
+  margin-left: -26%;
+  object-fit: cover;
+  object-position: right top;
+}
+
+#propmaat-dossier {
   opacity: 1;
-  transform: none;
 }
 
 html[data-pin-journey="on"] .pin-static {

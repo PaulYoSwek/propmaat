@@ -43,10 +43,18 @@ export const nl = {
   },
   home: {
     heroTitle: "Eén flow voor pand, deal en gesprek",
+    heroEyebrow: "Geautomatiseerd CRM voor makelaars",
     heroSub:
-      "Propmaat is de werkruimte voor makelaars. Panden, pipeline en elk gesprek — website, WhatsApp en mail — in één systeem.",
+      "Panden, pipeline, attesten en elk gesprek — website, WhatsApp en mail — in één werkruimte.",
     ctaDemo: "Vraag een demo",
     ctaFeatures: "Bekijk functies",
+    scrollHint: "Scroll",
+    productPreviewLabel: "Propmaat-dossier met pand, workflow en checklist",
+    mapLabel: "Kaart van België en Nederland",
+    mapEyebrow: "België & Nederland",
+    mapTitle: "Eén flow voor pand, deal en gesprek",
+    mapBody:
+      "Voor makelaars van Antwerpen tot Amsterdam. Panden, pipeline en elk gesprek — website, WhatsApp en mail — in één werkruimte.",
     beats: [
       {
         title: "Het pand",

@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { pointAlong, scrollProgress } from "./pin-progress";
+import {
+  dropEase,
+  journeyEndY,
+  pointAlong,
+  scrollProgress,
+} from "./pin-progress";
 
 describe("scrollProgress", () => {
   it("clamps below the start to 0", () => {
@@ -53,5 +58,36 @@ describe("pointAlong", () => {
     ];
     expect(pointAlong(-1, waypoints)).toEqual({ x: 0, y: 0, scale: 1 });
     expect(pointAlong(2, waypoints)).toEqual({ x: 10, y: 0, scale: 2 });
+  });
+});
+
+describe("journeyEndY", () => {
+  it("clamps the landing scroll so the pin can always reach the map", () => {
+    expect(journeyEndY(1600, 1100, 1080)).toBe(1080);
+  });
+
+  it("uses the preferred viewport offset when there is enough page", () => {
+    expect(journeyEndY(2000, 1000, 3000, 0.4)).toBe(1600);
+  });
+
+  it("returns 1 when the page cannot scroll", () => {
+    expect(journeyEndY(800, 1100, 0)).toBe(1);
+  });
+});
+
+describe("dropEase", () => {
+  it("holds the pin in place for the first tenth of the scroll", () => {
+    expect(dropEase(0)).toBe(0);
+    expect(dropEase(0.1)).toBe(0);
+  });
+
+  it("eases in so the pin falls toward the map", () => {
+    expect(dropEase(0.55)).toBeCloseTo(0.25);
+    expect(dropEase(1)).toBe(1);
+  });
+
+  it("clamps outside 0–1", () => {
+    expect(dropEase(-1)).toBe(0);
+    expect(dropEase(2)).toBe(1);
   });
 });

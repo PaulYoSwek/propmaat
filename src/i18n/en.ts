@@ -44,10 +44,18 @@ export const en: Dictionary = {
   },
   home: {
     heroTitle: "One flow for listings, deals, and conversations",
+    heroEyebrow: "Automated CRM for estate agents",
     heroSub:
-      "Propmaat is the workspace for estate agents. Listings, pipeline, and every conversation — website, WhatsApp, and email — in one system.",
+      "Listings, pipeline, certificates, and every conversation — website, WhatsApp, and email — in one workspace.",
     ctaDemo: "Request a demo",
     ctaFeatures: "See features",
+    scrollHint: "Scroll",
+    productPreviewLabel: "Propmaat dossier with listing, workflow, and checklist",
+    mapLabel: "Map of Belgium and the Netherlands",
+    mapEyebrow: "Belgium & the Netherlands",
+    mapTitle: "One flow for listings, deals, and conversations",
+    mapBody:
+      "For estate agents from Antwerp to Amsterdam. Listings, pipeline, and every conversation — website, WhatsApp, and email — in one workspace.",
     beats: [
       {
         title: "The listing",

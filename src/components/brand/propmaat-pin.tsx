@@ -5,20 +5,28 @@ export function PropmaatPin({
   size?: number;
   className?: string;
 }) {
-  const height = Math.round(size * (28 / 20));
+  const height = Math.round(size * (78 / 55));
   return (
     <svg
       width={size}
       height={height}
-      viewBox="0 0 20 28"
+      viewBox="0 0 55 78"
       fill="none"
       className={className}
       aria-hidden
     >
       <path
-        fill="currentColor"
-        fillRule="evenodd"
-        d="M10 1.4C5.4 1.4 1.7 5 1.7 9.7c0 7.1 7.3 16.2 7.9 17a.55.55 0 0 0 .8 0c.6-.8 7.9-9.9 7.9-17 0-4.7-3.7-8.3-8.3-8.3Zm0 5.1a3.3 3.3 0 1 1 0 6.6 3.3 3.3 0 0 1 0-6.6Z"
+        d="M27.5 5.2c-11.4 0-20.4 9-20.4 20.8 0 16.8 17.8 40.6 19.3 42.5.4.5 1 .8 1.6.8.6 0 1.2-.3 1.6-.8 1.5-1.9 19.3-25.7 19.3-42.5 0-11.8-9-20.8-20.4-20.8Z"
+        stroke="currentColor"
+        strokeWidth="5.2"
+        strokeLinejoin="round"
+      />
+      <circle
+        cx="27.5"
+        cy="25.2"
+        r="8.8"
+        stroke="currentColor"
+        strokeWidth="5.2"
       />
     </svg>
   );

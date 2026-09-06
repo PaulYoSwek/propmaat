@@ -27,11 +27,19 @@ export function PinJourney() {
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (media.matches) return;
-
-    document.documentElement.dataset.pinJourney = "on";
-
     let frame = 0;
+    let running = false;
+
+    const stop = () => {
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+        frame = 0;
+      }
+      running = false;
+      delete document.documentElement.dataset.pinJourney;
+      setPose(null);
+      document.getElementById("propmaat-dossier")?.classList.remove("is-landed");
+    };
 
     const tick = () => {
       const slot = centerOf("propmaat-pin-slot");
@@ -61,6 +69,7 @@ export function PinJourney() {
 
       const next = pointAlong(progress, waypoints);
       setPose({ ...next, visible: true });
+      document.documentElement.dataset.pinJourney = "on";
 
       const dossier = document.getElementById("propmaat-dossier");
       dossier?.classList.toggle("is-landed", progress >= LAND_AT);
@@ -68,12 +77,26 @@ export function PinJourney() {
       frame = window.requestAnimationFrame(tick);
     };
 
-    frame = window.requestAnimationFrame(tick);
+    const start = () => {
+      if (running) return;
+      running = true;
+      frame = window.requestAnimationFrame(tick);
+    };
+
+    const sync = () => {
+      if (media.matches) {
+        stop();
+      } else {
+        start();
+      }
+    };
+
+    sync();
+    media.addEventListener("change", sync);
 
     return () => {
-      window.cancelAnimationFrame(frame);
-      delete document.documentElement.dataset.pinJourney;
-      document.getElementById("propmaat-dossier")?.classList.remove("is-landed");
+      media.removeEventListener("change", sync);
+      stop();
     };
   }, []);
 

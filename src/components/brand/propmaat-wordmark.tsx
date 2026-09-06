@@ -14,6 +14,7 @@ export function PropmaatWordmark({
 }) {
   const pathname = usePathname();
   const [reduceMotion, setReduceMotion] = useState(false);
+  const [journeyOn, setJourneyOn] = useState(false);
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -23,13 +24,26 @@ export function PropmaatWordmark({
     return () => media.removeEventListener("change", sync);
   }, []);
 
+  useEffect(() => {
+    const root = document.documentElement;
+    const sync = () => setJourneyOn(root.dataset.pinJourney === "on");
+    sync();
+    const observer = new MutationObserver(sync);
+    observer.observe(root, {
+      attributes: true,
+      attributeFilter: ["data-pin-journey"],
+    });
+    return () => observer.disconnect();
+  }, []);
+
   const onHome = tryPathKey(pathname) === "home";
   const variant =
-    forceVariant ?? (onHome && !reduceMotion ? "slot" : "complete");
+    forceVariant ?? (onHome && journeyOn && !reduceMotion ? "slot" : "complete");
 
   return (
     <span
       className={`inline-flex items-end text-[22px] leading-none font-extrabold tracking-tight text-ink ${className}`}
+      role="img"
       aria-label="Propmaat"
     >
       <span>Pr</span>

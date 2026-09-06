@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f4ef;
-  --foreground: #12141a;
+  --background: #f7f4ee;
+  --foreground: #2d2d2d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-surface: #ffffff;
-  --color-ink: #12141a;
-  --color-muted: #5c6170;
-  --color-accent: #0f766e;
-  --color-accent-hover: #0d9488;
-  --color-accent-soft: #ccfbf1;
-  --color-line: #e6e2d8;
+  --color-surface: #fbf8f2;
+  --color-ink: #2d2d2d;
+  --color-muted: #6b6860;
+  --color-accent: #2d2d2d;
+  --color-accent-hover: #1a1a1a;
+  --color-accent-soft: #e8e4dc;
+  --color-line: #ddd8ce;
+  --color-on-ink: #f7f4ee;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -57,4 +58,32 @@ body {
 }
 .delay-3 {
   animation-delay: 240ms;
+}
+
+#propmaat-dossier {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease;
+}
+
+#propmaat-dossier.is-landed {
+  opacity: 1;
+  transform: none;
+}
+
+html[data-pin-journey="on"] .pin-static {
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise {
+    animation: none;
+  }
+
+  #propmaat-dossier {
+    opacity: 1;
+    transform: none;
+  }
 }

@@ -23,7 +23,7 @@ export function Eyebrow({ children }: { children: ReactNode }) {
 }
 
 export function primaryButtonClass(extra = "") {
-  return `inline-flex items-center justify-center rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-hover ${extra}`;
+  return `inline-flex items-center justify-center rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-on-ink transition-colors hover:bg-accent-hover ${extra}`;
 }
 
 export function secondaryButtonClass(extra = "") {

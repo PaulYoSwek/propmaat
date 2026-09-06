@@ -17,7 +17,7 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
       <Link
         href={swapLocalePath(pathname, "nl")}
         className={`rounded-full px-2.5 py-1 ${
-          locale === "nl" ? "bg-ink text-white" : "text-muted hover:text-ink"
+          locale === "nl" ? "bg-ink text-on-ink" : "text-muted hover:text-ink"
         }`}
         hrefLang="nl"
       >
@@ -26,7 +26,7 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
       <Link
         href={swapLocalePath(pathname, "en")}
         className={`rounded-full px-2.5 py-1 ${
-          locale === "en" ? "bg-ink text-white" : "text-muted hover:text-ink"
+          locale === "en" ? "bg-ink text-on-ink" : "text-muted hover:text-ink"
         }`}
         hrefLang="en"
       >

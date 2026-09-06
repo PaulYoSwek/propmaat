@@ -34,7 +34,7 @@ export function PropmaatWordmark({
     >
       <span>Pr</span>
       <span
-        id="propmaat-pin-slot"
+        id={forceVariant !== "complete" ? "propmaat-pin-slot" : undefined}
         className="mx-0.5 inline-flex h-[1em] w-[0.95em] items-end justify-center"
       >
         {variant === "complete" ? <PropmaatPin size={20} /> : null}

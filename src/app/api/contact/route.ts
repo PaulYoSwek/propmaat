@@ -76,12 +76,12 @@ export async function POST(request: NextRequest) {
 
     if (apiKey && to) {
       const resend = new Resend(apiKey);
-      const from = process.env.CONTACT_FROM ?? "PandFlow <onboarding@resend.dev>";
+      const from = process.env.CONTACT_FROM ?? "Propmaat <onboarding@resend.dev>";
       const { error } = await resend.emails.send({
         from,
         to,
         replyTo: email,
-        subject: `[PandFlow demo] ${oneLine(office)} — ${seats} seats`,
+        subject: `[Propmaat demo] ${oneLine(office)} — ${seats} seats`,
         text: [
           `Name: ${oneLine(name)}`,
           `Office: ${oneLine(office)}`,

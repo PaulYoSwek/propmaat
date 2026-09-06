@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { localizedPath } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/nl";
+import { PropmaatWordmark } from "./brand/propmaat-wordmark";
 import { Container } from "./ui";
 
 export function SiteFooter({
@@ -15,7 +16,7 @@ export function SiteFooter({
     <footer className="mt-auto border-t border-line bg-surface">
       <Container className="flex flex-col gap-6 py-10 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-lg font-semibold tracking-tight">PandFlow</p>
+          <PropmaatWordmark forceVariant="complete" />
           <p className="mt-1 max-w-sm text-sm text-muted">{dict.footer.tagline}</p>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">

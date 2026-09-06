@@ -30,7 +30,7 @@ export function MockSidebar({ items, active }: { items: string[]; active: string
   return (
     <aside className="hidden w-36 shrink-0 border-r border-line bg-[#faf9f6] p-2 sm:block">
       <p className="mb-2 px-2 font-mono text-[10px] font-semibold text-accent">
-        PandFlow
+        Propmaat
       </p>
       <ul className="space-y-0.5">
         {items.map((item) => (

@@ -3,47 +3,47 @@ import { cookiesNl, privacyNl, termsNl } from "./legal-nl";
 export const nl = {
   meta: {
     home: {
-      title: "ImmoCRM — Eén flow voor pand, deal en gesprek",
+      title: "ImmoCRM",
       description:
         "CRM voor makelaars in België en Nederland. Panden, deals, WhatsApp, mail en publicatie in één werkruimte. €140 per maand voor de eerste gebruiker, daarna €40.",
     },
     functies: {
-      title: "Functies — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "Panden, publicatie, deals, klanten, inbox, agenda, contracten en virtuele inrichting. Alles wat je kantoor nodig heeft.",
     },
     prijzen: {
-      title: "Prijzen — vanaf €140 — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "€140 per maand voor de eerste gebruiker, daarna €40 per extra gebruiker. Of een prijs op maat. Vraag een demo om te starten.",
     },
     contact: {
-      title: "Vraag een demo — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "Plan een demo van ImmoCRM. Mail info@turboturtle.nl of bel +31 6 3496 5518. Geen automatische inschrijving.",
     },
     privacy: {
-      title: "Privacyverklaring — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "Hoe ImmoCRM persoonsgegevens verwerkt, conform de AVG.",
     },
     cookies: {
-      title: "Cookieverklaring — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "Welke cookies ImmoCRM zet en hoe je ze beheert.",
     },
     voorwaarden: {
-      title: "Algemene voorwaarden — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "Voorwaarden voor de website, demo en het gebruik van ImmoCRM.",
     },
     stappen: {
-      title: "Aan de slag — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "In drie stappen operationeel: demo, datamigratie, training en go-live.",
     },
     faq: {
-      title: "Veelgestelde vragen — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "Antwoorden over prijs, seats, onboarding, Immoweb, WhatsApp en privacy.",
     },

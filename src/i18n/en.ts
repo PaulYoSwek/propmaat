@@ -4,45 +4,45 @@ import type { Dictionary } from "./nl";
 export const en: Dictionary = {
   meta: {
     home: {
-      title: "ImmoCRM — One flow for listings, deals, and conversations",
+      title: "ImmoCRM",
       description:
         "CRM for estate agents in Belgium and the Netherlands. Listings, deals, WhatsApp, email, and publishing in one workspace. €140 per month for the first user, then €40.",
     },
     functies: {
-      title: "Features — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "Listings, publishing, deals, contacts, inbox, calendar, contracts, and virtual staging. Everything your office needs.",
     },
     prijzen: {
-      title: "Pricing — from €140 — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "€140 per month for the first user, then €40 per extra user. Or a custom price. Request a demo to get started.",
     },
     contact: {
-      title: "Request a demo — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "Book an ImmoCRM demo. Email info@turboturtle.nl or call +31 6 3496 5518. No automated signup.",
     },
     privacy: {
-      title: "Privacy statement — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "How ImmoCRM processes personal data under the GDPR.",
     },
     cookies: {
-      title: "Cookie policy — ImmoCRM",
+      title: "ImmoCRM",
       description: "Which cookies ImmoCRM sets and how to manage them.",
     },
     voorwaarden: {
-      title: "Terms of service — ImmoCRM",
+      title: "ImmoCRM",
       description: "Terms for the website, demo, and use of ImmoCRM.",
     },
     stappen: {
-      title: "Get started — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "Live in three steps: demo, data migration, training and go-live.",
     },
     faq: {
-      title: "Frequently asked questions — ImmoCRM",
+      title: "ImmoCRM",
       description:
         "Answers on pricing, seats, onboarding, Immoweb, WhatsApp, and privacy.",
     },

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { ChannelBadge, type ChannelId } from "./channel-icon";
 import { PropmaatPinImage } from "./propmaat-pin-image";
 import { Container, Eyebrow } from "@/components/ui";
@@ -11,6 +11,73 @@ import {
   isChannelId,
   scrollToAutomation,
 } from "@/lib/automation-channel";
+
+type AutomationChannel = {
+  id: ChannelId;
+  label: string;
+  headline: string;
+  body: string;
+  shot?: string;
+  video?: string;
+  shotAlt?: string;
+};
+
+function AutomationMedia({
+  video,
+  poster,
+  alt,
+}: {
+  video?: string;
+  poster?: string;
+  alt: string;
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const node = videoRef.current;
+    if (!node || !video) return;
+
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const sync = () => {
+      if (media.matches) {
+        node.pause();
+        node.currentTime = 0;
+        return;
+      }
+      void node.play();
+    };
+
+    sync();
+    media.addEventListener("change", sync);
+    return () => media.removeEventListener("change", sync);
+  }, [video]);
+
+  return (
+    <div className="automation-shot overflow-hidden rounded-xl border border-line bg-surface">
+      {video ? (
+        <video
+          ref={videoRef}
+          src={video}
+          poster={poster}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label={alt}
+          className="block h-auto w-full"
+        />
+      ) : (
+        <img
+          src={poster}
+          alt={alt}
+          className="block h-auto w-full"
+          draggable={false}
+        />
+      )}
+    </div>
+  );
+}
 
 const ARROW_MOVE: Record<string, number> = {
   ArrowRight: 1,
@@ -30,14 +97,7 @@ export function AutomationSection({
   heading: string;
   lead: string;
   shotHint: string;
-  channels: {
-    id: ChannelId;
-    label: string;
-    headline: string;
-    body: string;
-    shot?: string;
-    shotAlt?: string;
-  }[];
+  channels: AutomationChannel[];
 }) {
   const uid = useId();
   const [activeId, setActiveId] = useState<ChannelId>(channels[0].id);
@@ -83,7 +143,7 @@ export function AutomationSection({
   return (
     <section
       id="propmaat-automation"
-      className="flex flex-col scroll-mt-20 border-y border-line bg-band py-10 sm:py-14 lg:min-h-[calc(100svh-4rem)]"
+      className="flex flex-col scroll-mt-20 border-y border-line bg-band py-10 sm:py-14"
     >
       <Container className="flex flex-1 flex-col">
         <div className="flex items-center gap-3">
@@ -155,17 +215,14 @@ export function AutomationSection({
           id={`${uid}-panel`}
           role="tabpanel"
           aria-labelledby={`${uid}-tab-${active.id}`}
-          className="mt-8 grid flex-1 items-center gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(16rem,0.8fr)] lg:gap-14"
+          className="mt-8 grid items-start gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(16rem,0.8fr)] lg:gap-14"
         >
-          {active.shot ? (
-            <div className="automation-shot overflow-hidden rounded-xl border border-line bg-surface">
-              <img
-                src={active.shot}
-                alt={active.shotAlt ?? active.label}
-                className="block h-auto w-full"
-                draggable={false}
-              />
-            </div>
+          {active.video || active.shot ? (
+            <AutomationMedia
+              video={active.video}
+              poster={active.shot}
+              alt={active.shotAlt ?? active.label}
+            />
           ) : (
             <div
               className="flex aspect-[1024/554] items-center justify-center rounded-xl border border-dashed border-line bg-surface"

@@ -84,24 +84,24 @@ body {
   display: block;
 }
 
-.propmaat-hero-ch[data-k="Pr"] {
-  margin-inline-end: -0.05em;
+.propmaat-hero-ch[data-k="Im"] {
+  margin-inline-end: -0.04em;
 }
 
-.propmaat-hero-ch[data-k="pm"] {
-  margin-inline-end: -0.048em;
+.propmaat-hero-ch[data-k="mm"] {
+  margin-inline-end: -0.06em;
 }
 
-.propmaat-hero-ch[data-k="ma"] {
-  margin-inline-end: -0.055em;
+.propmaat-hero-ch[data-k="mo"] {
+  margin-inline-end: -0.02em;
 }
 
-.propmaat-hero-ch[data-k="aa"] {
-  margin-inline-end: -0.01em;
+.propmaat-hero-ch[data-k="CR"] {
+  margin-inline-end: -0.03em;
 }
 
-.propmaat-hero-ch[data-k="at"] {
-  margin-inline-end: -0.026em;
+.propmaat-hero-ch[data-k="RM"] {
+  margin-inline-end: -0.035em;
 }
 
 .propmaat-hero-pin {

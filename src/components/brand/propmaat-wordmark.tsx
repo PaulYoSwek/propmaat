@@ -6,7 +6,7 @@ export function PropmaatWordmark({
   return (
     <span className={`propmaat-wordmark ${className}`} aria-hidden>
       <img
-        src="/brand/propmaat-lockup.png"
+        src="/brand/immocrm-lockup.png"
         alt=""
         className="propmaat-wordmark-lockup select-none"
         draggable={false}

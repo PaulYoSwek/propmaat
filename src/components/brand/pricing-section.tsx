@@ -51,6 +51,8 @@ export function PricingSection({
     subtitle: string;
     price: string;
     priceNote?: string;
+    extraPrice?: string;
+    extraPriceNote?: string;
     featured?: boolean;
     quote?: boolean;
     features: string[];
@@ -73,13 +75,14 @@ export function PricingSection({
         <h2 className="mt-3 max-w-2xl text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
           {title}
         </h2>
-        <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
           {subtitle}
         </p>
 
-        <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-3">
+        <div className="mx-auto mt-10 grid max-w-4xl items-stretch gap-6 lg:grid-cols-2">
           {plans.map((plan) => {
             const featured = Boolean(plan.featured);
+            const muted = featured ? "text-on-ink/70" : "text-muted";
             return (
               <article
                 key={plan.id}
@@ -97,27 +100,25 @@ export function PricingSection({
                 <h3 className="text-xl font-semibold tracking-tight">
                   {plan.name}
                 </h3>
-                <p
-                  className={`mt-1 text-sm ${featured ? "text-on-ink/70" : "text-muted"}`}
-                >
-                  {plan.subtitle}
-                </p>
+                <p className={`mt-1 text-sm ${muted}`}>{plan.subtitle}</p>
                 <p className="mt-6 text-4xl font-semibold tracking-tight">
                   {plan.price}
                 </p>
-                {plan.quote ? (
-                  <p
-                    className={`mt-1 text-sm ${featured ? "text-on-ink/70" : "text-muted"}`}
-                  >
-                    {plan.priceNote}
-                  </p>
-                ) : (
-                  <p
-                    className={`mt-1 text-sm ${featured ? "text-on-ink/70" : "text-muted"}`}
-                  >
-                    {priceSuffix}
-                  </p>
-                )}
+                <p className={`mt-1 text-sm ${muted}`}>
+                  {plan.priceNote ?? (plan.quote ? null : priceSuffix)}
+                </p>
+                {plan.extraPrice ? (
+                  <>
+                    <p className="mt-4 text-2xl font-semibold tracking-tight">
+                      {plan.extraPrice}
+                    </p>
+                    {plan.extraPriceNote ? (
+                      <p className={`mt-1 text-sm ${muted}`}>
+                        {plan.extraPriceNote}
+                      </p>
+                    ) : null}
+                  </>
+                ) : null}
                 <ul className="mt-8 flex-1 space-y-3 text-sm">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex gap-2.5">

@@ -3,53 +3,53 @@ import { cookiesNl, privacyNl, termsNl } from "./legal-nl";
 export const nl = {
   meta: {
     home: {
-      title: "Propmaat — Eén flow voor pand, deal en gesprek",
+      title: "ImmoCRM — Eén flow voor pand, deal en gesprek",
       description:
-        "CRM voor makelaars in België en Nederland. Panden, deals, WhatsApp, mail en publicatie in één werkruimte. €50 per seat per maand.",
+        "CRM voor makelaars in België en Nederland. Panden, deals, WhatsApp, mail en publicatie in één werkruimte. €140 per maand voor de eerste gebruiker, daarna €40.",
     },
     functies: {
-      title: "Functies — Propmaat",
+      title: "Functies — ImmoCRM",
       description:
         "Panden, publicatie, deals, klanten, inbox, agenda, contracten en virtuele inrichting. Alles wat je kantoor nodig heeft.",
     },
     prijzen: {
-      title: "Prijzen — vanaf €35 per seat — Propmaat",
+      title: "Prijzen — vanaf €140 — ImmoCRM",
       description:
-        "Basis €35, Propmaat €50 per seat per maand, of op maat. Vraag een demo om te starten.",
+        "€140 per maand voor de eerste gebruiker, daarna €40 per extra gebruiker. Of een prijs op maat. Vraag een demo om te starten.",
     },
     contact: {
-      title: "Vraag een demo — Propmaat",
+      title: "Vraag een demo — ImmoCRM",
       description:
-        "Plan een demo van Propmaat. Mail info@turboturtle.nl of bel +31 6 3496 5518. Geen automatische inschrijving.",
+        "Plan een demo van ImmoCRM. Mail info@turboturtle.nl of bel +31 6 3496 5518. Geen automatische inschrijving.",
     },
     privacy: {
-      title: "Privacyverklaring — Propmaat",
+      title: "Privacyverklaring — ImmoCRM",
       description:
-        "Hoe Turbo Turtle BV persoonsgegevens verwerkt voor Propmaat, conform de AVG.",
+        "Hoe ImmoCRM persoonsgegevens verwerkt, conform de AVG.",
     },
     cookies: {
-      title: "Cookieverklaring — Propmaat",
+      title: "Cookieverklaring — ImmoCRM",
       description:
-        "Welke cookies Propmaat zet en hoe je ze beheert.",
+        "Welke cookies ImmoCRM zet en hoe je ze beheert.",
     },
     voorwaarden: {
-      title: "Algemene voorwaarden — Propmaat",
+      title: "Algemene voorwaarden — ImmoCRM",
       description:
-        "Voorwaarden voor de website, demo en het gebruik van Propmaat.",
+        "Voorwaarden voor de website, demo en het gebruik van ImmoCRM.",
     },
     stappen: {
-      title: "Aan de slag — Propmaat",
+      title: "Aan de slag — ImmoCRM",
       description:
         "In drie stappen operationeel: demo, datamigratie, training en go-live.",
     },
     faq: {
-      title: "Veelgestelde vragen — Propmaat",
+      title: "Veelgestelde vragen — ImmoCRM",
       description:
         "Antwoorden over prijs, seats, onboarding, Immoweb, WhatsApp en privacy.",
     },
   },
   brand: {
-    name: "Propmaat",
+    name: "ImmoCRM",
   },
   nav: {
     features: "Functies",
@@ -68,7 +68,7 @@ export const nl = {
     cookies: "Cookieverklaring",
     terms: "Algemene voorwaarden",
     legal: "Juridisch",
-    copyright: "© 2026 Turbo Turtle BV",
+    copyright: "© 2026 ImmoCRM",
     product: "Product",
     company: "Kantoor",
     region: "Voor makelaars in België en Nederland",
@@ -81,7 +81,7 @@ export const nl = {
     heroTitle: "Het CRM dat het kantoorwerk overneemt",
     heroEyebrow: "Voor makelaars in België en Nederland",
     heroSub:
-      "Propmaat automatiseert het werk rondom je panden. Checklists, attesten en opvolging lopen vanzelf, mail, WhatsApp en je website zitten in dezelfde flow.",
+      "ImmoCRM automatiseert het werk rondom je panden. Checklists, attesten en opvolging lopen vanzelf, mail, WhatsApp en je website zitten in dezelfde flow.",
     heroWhy:
       "Pand, deals en gesprekken staan op één plek. Geen overtypen, geen losse inboxen. Werkt je kantoor anders? Dan passen we de stappen aan.",
     heroChannelsLead:
@@ -95,11 +95,11 @@ export const nl = {
     ],
     ctaDemo: "Vraag een demo",
     scrollHint: "Scroll",
-    productPreviewLabel: "Propmaat-productvideo met dossier, workflow en checklist",
+    productPreviewLabel: "ImmoCRM-productvideo met dossier, workflow en checklist",
     automationTitle: "Automation",
     automationHeading: "Eén flow die je kantoorwerk versnelt",
     automationLead:
-      "Propmaat versnelt de workflows van je kantoor. Mail, WhatsApp, website, agenda en contracten lopen in één flow, zodat je minder overtypt en minder najaagt.",
+      "ImmoCRM versnelt de workflows van je kantoor. Mail, WhatsApp, website, agenda en contracten lopen in één flow, zodat je minder overtypt en minder najaagt.",
     automationShotHint: "Screenshot volgt",
     automationChannels: [
       {
@@ -108,7 +108,9 @@ export const nl = {
         headline: "Mail landt in het dossier, niet in een losse inbox.",
         body: "Inkomende berichten horen bij het pand of de deal. Je antwoordt met sjablonen, zonder overtypen naar een andere mailbox.",
         shot: "/brand/automation-mail.webp",
-        shotAlt: "Mail-inbox met een conceptantwoord voor een bezichtiging",
+        video: "/brand/automation-mail.mp4",
+        shotAlt:
+          "Mailregels voor gevolgde afzenders en trefwoorden, met inbox en conceptantwoord",
       },
       {
         id: "whatsapp" as const,
@@ -143,9 +145,9 @@ export const nl = {
         shotAlt: "Samenwerkingsdossier met document, reacties en tijdlijn",
       },
     ],
-    whyUsTitle: "Waarom Propmaat",
+    whyUsTitle: "Waarom ImmoCRM",
     whyUsLead:
-      "Een algemeen CRM past zich aan vastgoed aan. Propmaat is ervoor gebouwd.",
+      "Een algemeen CRM past zich aan vastgoed aan. ImmoCRM is ervoor gebouwd.",
     whyUsBody:
       "Pand, deal en gesprek staan op één plek. Checklists en opvolging lopen mee, zodat je kantoor minder overtypt en minder najaagt.",
     whyUsPoints: [
@@ -186,20 +188,20 @@ export const nl = {
     landingBeds: "4 slpk",
     customTitle: "Jouw kantoor, jouw flow",
     customBody:
-      "Propmaat dekt het pad van prospect tot ondertekening. Werkt je kantoor anders, dan voegen we workflows of functies toe op aanvraag. Dat spreken we af in een demo — geen catalogus van extra pakketten.",
+      "ImmoCRM dekt het pad van prospect tot ondertekening. Werkt je kantoor anders, dan voegen we workflows of functies toe op aanvraag. Dat spreken we af in een demo — geen catalogus van extra pakketten.",
     priceEyebrow: "Prijs",
-    priceTitle: "€50 per seat per maand",
+    priceTitle: "€140 voor de eerste gebruiker",
     priceBody:
-      "Eén seat is één login. Alle modules erin, geen verborgen pakketten. Bekijk wat je krijgt.",
+      "Daarna €40 per extra gebruiker per maand. Alle modules erin, geen verborgen pakketten. Bekijk wat je krijgt.",
     priceCta: "Naar prijzen",
-    finalTitle: "Zie Propmaat in je kantoor",
+    finalTitle: "Zie ImmoCRM in je kantoor",
     finalBody:
       "We lopen het product met je door. Geen automatische trial, wel een gerichte demo.",
   },
   features: {
     title: "Alles in één werkruimte",
     intro:
-      "Propmaat dekt het pad van prospect tot ondertekening. Geen extra modules om later te kopen — dit is het product.",
+      "ImmoCRM dekt het pad van prospect tot ondertekening. Geen extra modules om later te kopen — dit is het product.",
     catalogEyebrow: "Functies",
     catalogTitle: "Alles wat het kantoor al doet, in één CRM",
     catalogLead:
@@ -207,7 +209,7 @@ export const nl = {
     catalogCta: "Lees de uitleg per functie",
     custom: {
       title: "Op maat",
-      body: "Propmaat kan workflows of functies toevoegen die bij jouw kantoor passen. Geen modulewinkel: we spreken scope en timing af in een demo.",
+      body: "ImmoCRM kan workflows of functies toevoegen die bij jouw kantoor passen. Geen modulewinkel: we spreken scope en timing af in een demo.",
       bullets: [
         "Workflows die aansluiten op hoe je kantoor al werkt",
         "Extra velden of stappen op aanvraag",
@@ -258,7 +260,7 @@ export const nl = {
       {
         id: "klanten",
         title: "Klanten",
-        body: "Contacten met een zoekprofiel. Propmaat koppelt interesse aan passende panden, zodat matching geen losse lijst is.",
+        body: "Contacten met een zoekprofiel. ImmoCRM koppelt interesse aan passende panden, zodat matching geen losse lijst is.",
         bullets: [
           "Contactfiche met tijdlijn",
           "Zoekprofiel per klant",
@@ -503,7 +505,7 @@ export const nl = {
       {
         number: "01",
         title: "Gratis demo",
-        body: "We tonen Propmaat en bespreken hoe jouw kantoor werkt. Vrijblijvend, geen automatische inschrijving.",
+        body: "We tonen ImmoCRM en bespreken hoe jouw kantoor werkt. Vrijblijvend, geen automatische inschrijving.",
       },
       {
         number: "02",
@@ -523,20 +525,20 @@ export const nl = {
     lead: "Kort en concreet. Staat je vraag er niet bij, stel hem in de demo.",
     items: [
       {
-        q: "Voor wie is Propmaat?",
+        q: "Voor wie is ImmoCRM?",
         a: "Voor makelaarskantoren in België en Nederland die pand, deal en gesprek in één werkruimte willen. Geen algemeen CRM dat je later tot vastgoed ombouwt.",
       },
       {
         q: "Wat is het verschil met een algemeen CRM?",
-        a: "Propmaat is gebouwd rond het dossier: attesten, publicatie, bezichtigingen en berichten horen bij het pand of de deal. Je hoeft mail, WhatsApp en spreadsheets niet zelf aan elkaar te knopen.",
+        a: "ImmoCRM is gebouwd rond het dossier: attesten, publicatie, bezichtigingen en berichten horen bij het pand of de deal. Je hoeft mail, WhatsApp en spreadsheets niet zelf aan elkaar te knopen.",
       },
       {
         q: "Hoeveel kost het?",
-        a: "Basis is €35 per gebruiker per maand. Propmaat, het volledige plan, is €50. Voor grotere teams of andere workflows maken we een offerte.",
+        a: "ImmoCRM is €140 per maand voor de eerste gebruiker, daarna €40 per extra gebruiker. Alles zit erin. Voor grotere teams of andere workflows maken we een offerte op maat.",
       },
       {
         q: "Wat is een seat?",
-        a: "Eén seat is één persoon met een login. Je betaalt per actieve gebruiker, niet per pand of per module.",
+        a: "Eén seat is één persoon met een login. De eerste gebruiker is €140 per maand, elke extra gebruiker €40. Je betaalt per actieve login, niet per pand of per module.",
       },
       {
         q: "Is er een gratis trial?",
@@ -552,11 +554,11 @@ export const nl = {
       },
       {
         q: "Werkt het in België én Nederland?",
-        a: "Ja. Propmaat is gemaakt voor kantoren van Antwerpen tot Amsterdam. Het product is beschikbaar in het Nederlands en Engels.",
+        a: "Ja. ImmoCRM is gemaakt voor kantoren van Antwerpen tot Amsterdam. Het product is beschikbaar in het Nederlands en Engels.",
       },
       {
         q: "Heb ik aparte accounts nodig voor WhatsApp, mail en Immoweb?",
-        a: "Ja. Die diensten vragen hun eigen accounts. Propmaat koppelt ze, zodat het werk in één flow blijft. Contracten schrijf en teken je in Propmaat.",
+        a: "Ja. Die diensten vragen hun eigen accounts. ImmoCRM koppelt ze, zodat het werk in één flow blijft. Contracten schrijf en teken je in ImmoCRM.",
       },
       {
         q: "Stuurt de AI zelf berichten naar klanten?",
@@ -579,7 +581,7 @@ export const nl = {
         a: "Je zet een lege kamerfoto om in een ingerichte preview. Het resultaat bewaar je bij de pandmedia.",
       },
       {
-        q: "Werkt Propmaat voor verkoop én verhuur?",
+        q: "Werkt ImmoCRM voor verkoop én verhuur?",
         a: "Het product is gebouwd rond pand, deal en gesprek — typisch voor verkoopkantoren. Verhuur in dezelfde dossiers bespreken we in de demo.",
       },
       {
@@ -598,9 +600,9 @@ export const nl = {
   },
   pricing: {
     eyebrow: "Prijzen",
-    title: "Duidelijke seats, geen verborgen pakketten",
+    title: "Eén plan, alles erin",
     subtitle:
-      "Een seat is één persoon met een login. Je betaalt per actieve gebruiker.",
+      "€140 per maand voor de eerste gebruiker, daarna €40 per extra gebruiker. Werkt je kantoor anders? Dan maken we een prijs op maat.",
     cta: "Vraag een demo",
     quoteCta: "Offerte aanvragen",
     featuredBadge: "Meest gekozen",
@@ -620,32 +622,23 @@ export const nl = {
     ],
     plans: [
       {
-        id: "basis",
-        name: "Basis",
-        subtitle: "Voor een klein kantoor dat wil starten",
-        price: "€35",
-        features: [
-          "Panden, deals en klanten",
-          "Mail-inbox",
-          "Website-leads",
-          "Agenda en bezichtigingen",
-          "Publicatie naar je website",
-          "Nederlands en Engels",
-        ],
-      },
-      {
-        id: "propmaat",
-        name: "Propmaat",
+        id: "immocrm",
+        name: "ImmoCRM",
         subtitle: "Het volledige kantoor, in één flow",
-        price: "€50",
+        price: "€140",
+        priceNote: "eerste gebruiker / maand",
+        extraPrice: "€40",
+        extraPriceNote: "per extra gebruiker / maand",
         featured: true,
         features: [
-          "Alles uit Basis, plus:",
-          "WhatsApp-inbox",
-          "Publicatie naar Immoweb",
-          "Contracten en ondertekenen",
+          "Onbeperkt panden, deals, klanten en website-leads",
+          "WhatsApp- en mail-inbox",
+          "Publicatie naar je website en Immoweb",
+          "Agenda, bezichtigingen en planner",
+          "Contracten: bewerken, geschiedenis en tekenen",
           "Virtuele inrichting",
           "Teamrollen en rechten",
+          "Nederlands en Engels",
           "Onboarding via een demo",
         ],
       },
@@ -657,7 +650,7 @@ export const nl = {
         priceNote: "Mogelijk korting bij een groter team",
         quote: true,
         features: [
-          "Alles uit Propmaat",
+          "Alles uit ImmoCRM",
           "Workflows op aanvraag",
           "Extra velden of stappen",
           "Persoonlijke onboarding",
@@ -665,16 +658,16 @@ export const nl = {
         ],
       },
     ],
-    note: "Immoweb, WhatsApp en mail vragen hun eigen accounts. Propmaat koppelt ze.",
+    note: "Immoweb, WhatsApp en mail vragen hun eigen accounts. ImmoCRM koppelt ze.",
     customNote:
       "Workflows of functies op maat kunnen we toevoegen op aanvraag.",
   },
   contact: {
     title: "Vraag een demo",
     eyebrow: "Contact",
-    body: "We lopen Propmaat met je door, kijken hoe jouw kantoor werkt en plannen daarna migratie en training. We antwoorden per e-mail of telefoon. Er is geen automatische inschrijving.",
-    companyLine: "Propmaat is een product van Turbo Turtle BV, gevestigd in België.",
-    priceHint: "Prijzen starten bij €35 per seat per maand. Propmaat, het volledige plan, is €50.",
+    body: "We lopen ImmoCRM met je door, kijken hoe jouw kantoor werkt en plannen daarna migratie en training. We antwoorden per e-mail of telefoon. Er is geen automatische inschrijving.",
+    companyLine: "ImmoCRM, gevestigd in België.",
+    priceHint: "€140 per maand voor de eerste gebruiker, daarna €40 per extra gebruiker. Of een prijs op maat.",
     priceLink: "Bekijk de prijzen",
     labels: {
       email: "E-mail",

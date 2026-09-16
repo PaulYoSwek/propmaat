@@ -1,6 +1,6 @@
 export const company = {
-  legalName: "Turbo Turtle BV",
-  productName: "Propmaat",
+  legalName: "ImmoCRM",
+  productName: "ImmoCRM",
   street: "Fluweelstraat 3",
   postalCity: "9000 Gent",
   countryNl: "België",

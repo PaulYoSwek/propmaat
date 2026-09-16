@@ -31,32 +31,29 @@ export function PropmaatHeroMark() {
   }, []);
 
   return (
-    <div className="propmaat-hero-mark" role="img" aria-label="Propmaat">
-      <span className="propmaat-hero-ch" data-k="Pr" aria-hidden>
-        P
+    <div className="propmaat-hero-mark" role="img" aria-label="ImmoCRM">
+      <span className="propmaat-hero-ch" data-k="Im" aria-hidden>
+        I
       </span>
-      <span className="propmaat-hero-ch" aria-hidden>
-        r
+      <span className="propmaat-hero-ch" data-k="mm" aria-hidden>
+        m
+      </span>
+      <span className="propmaat-hero-ch" data-k="mo" aria-hidden>
+        m
       </span>
       <span id="propmaat-pin-slot" className="propmaat-hero-pin">
         {showPin || reduceMotion ? (
           <PropmaatPinImage className="h-full w-full" />
         ) : null}
       </span>
-      <span className="propmaat-hero-ch" data-k="pm" aria-hidden>
-        p
+      <span className="propmaat-hero-ch" data-k="CR" aria-hidden>
+        C
       </span>
-      <span className="propmaat-hero-ch" data-k="ma" aria-hidden>
-        m
-      </span>
-      <span className="propmaat-hero-ch" data-k="aa" aria-hidden>
-        a
-      </span>
-      <span className="propmaat-hero-ch" data-k="at" aria-hidden>
-        a
+      <span className="propmaat-hero-ch" data-k="RM" aria-hidden>
+        R
       </span>
       <span className="propmaat-hero-ch" aria-hidden>
-        t
+        M
       </span>
     </div>
   );

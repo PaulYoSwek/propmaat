@@ -11,7 +11,7 @@ export const privacyEn: LegalDoc = {
     {
       heading: "1. Introduction",
       paragraphs: [
-        `${productName} is a product of ${legalName} ("we", "us"). This statement explains how we process personal data when you visit this website or request a demo.`,
+        `${legalName} ("we", "us"). This statement explains how we process personal data when you visit this website or request a demo.`,
         "We process data under the General Data Protection Regulation (GDPR) and the Belgian Act of 30 July 2018.",
       ],
     },
@@ -134,7 +134,7 @@ export const cookiesEn: LegalDoc = {
     {
       heading: "1. Introduction",
       paragraphs: [
-        `This cookie policy belongs to the ${productName} website, a product of ${legalName}. It explains which cookies we set and why.`,
+        `This cookie policy belongs to the ${productName} website. It explains which cookies we set and why.`,
         "Also read the {{privacy}}.",
       ],
     },
@@ -201,20 +201,20 @@ export const termsEn: LegalDoc = {
     {
       heading: "1. Who we are",
       paragraphs: [
-        `${productName} is a product of ${legalName}, registered at ${addressEn}, VAT ${vat}. Contact: ${email}, ${phoneDisplay}.`,
+        `${legalName}, registered at ${addressEn}, VAT ${vat}. Contact: ${email}, ${phoneDisplay}.`,
       ],
     },
     {
       heading: "2. Scope",
       paragraphs: [
-        "These terms apply to this website, demo requests, and, as described below, later use of Propmaat. Deviations apply only if we confirm them in writing.",
+        "These terms apply to this website, demo requests, and, as described below, later use of ImmoCRM. Deviations apply only if we confirm them in writing.",
         "A paid subscription or custom agreement may have its own contract or quote. That document prevails if it conflicts with this page.",
       ],
     },
     {
       heading: "3. The service",
       paragraphs: [
-        "Propmaat is software for estate agencies: listing files, deals, inbox, calendar, and the integrations described on the site. The website is informational. A demo is without obligation and does not create an account.",
+        "ImmoCRM is software for estate agencies: listing files, deals, inbox, calendar, and the integrations described on the site. The website is informational. A demo is without obligation and does not create an account.",
         "We may change features, prices, and timing. A signed quote or agreement prevails.",
       ],
     },
@@ -228,27 +228,27 @@ export const termsEn: LegalDoc = {
     {
       heading: "5. Prices and payment",
       paragraphs: [
-        "Public prices are on the {{prijzen}} page: Basis from €35 per seat per month, Propmaat €50 per seat per month, or a custom price. Prices exclude VAT unless we say otherwise.",
+        "Public prices are on the {{prijzen}} page: €140 per month for the first user, then €40 per extra user, or a custom price. Prices exclude VAT unless we say otherwise.",
         "Invoicing, payment terms, and cancellation are set in the agreement. If payment is late we may suspend access after a reminder.",
       ],
     },
     {
       heading: "6. Third-party accounts",
       paragraphs: [
-        "Immoweb, WhatsApp, email, and similar services need their own accounts and terms. Propmaat connects them; we are not responsible for those services, their outages, or their prices.",
+        "Immoweb, WhatsApp, email, and similar services need their own accounts and terms. ImmoCRM connects them; we are not responsible for those services, their outages, or their prices.",
       ],
     },
     {
       heading: "7. Your data in the software",
       paragraphs: [
-        "If you become a customer, you remain responsible for the data you put in Propmaat (listings, contacts, messages). You warrant that you may process that data. We then act as processor for that customer data, under the GDPR and a processor agreement.",
+        "If you become a customer, you remain responsible for the data you put in ImmoCRM (listings, contacts, messages). You warrant that you may process that data. We then act as processor for that customer data, under the GDPR and a processor agreement.",
         "Data from the demo form is covered by the {{privacy}}.",
       ],
     },
     {
       heading: "8. Intellectual property",
       paragraphs: [
-        "The Propmaat name, software, copy, images, and site design stay with Turbo Turtle BV or its licensors. You do not receive ownership, only the licence in the agreement.",
+        "The ImmoCRM name, software, copy, images, and site design stay with ImmoCRM or its licensors. You do not receive ownership, only the licence in the agreement.",
         "You may not reverse engineer, scrape, or resell, except where the law allows it.",
       ],
     },
@@ -256,7 +256,7 @@ export const termsEn: LegalDoc = {
       heading: "9. Liability",
       paragraphs: [
         "The website and demo are provided as is. We aim for accurate information, but the site may be incomplete.",
-        "Our liability for the paid service is, to the extent the law allows, limited to the amount you paid for Propmaat in the twelve months before the claim. We are not liable for indirect loss, lost profit, or data loss, except for intent or gross negligence.",
+        "Our liability for the paid service is, to the extent the law allows, limited to the amount you paid for ImmoCRM in the twelve months before the claim. We are not liable for indirect loss, lost profit, or data loss, except for intent or gross negligence.",
         "Nothing here limits liability that the law does not allow us to exclude.",
       ],
     },
@@ -269,7 +269,7 @@ export const termsEn: LegalDoc = {
     {
       heading: "11. Governing law",
       paragraphs: [
-        "These terms are governed by Belgian law. Disputes go to the courts of the district of Ghent, without prejudice to mandatory consumer law if it ever applied. Propmaat is aimed at professional estate agencies.",
+        "These terms are governed by Belgian law. Disputes go to the courts of the district of Ghent, without prejudice to mandatory consumer law if it ever applied. ImmoCRM is aimed at professional estate agencies.",
       ],
     },
     {

@@ -11,7 +11,7 @@ export const privacyNl: LegalDoc = {
     {
       heading: "1. Inleiding",
       paragraphs: [
-        `${productName} is een product van ${legalName} ("wij", "ons"). Deze verklaring legt uit hoe wij persoonsgegevens verwerken wanneer u deze website bezoekt of een demo aanvraagt.`,
+        `${legalName} ("wij", "ons"). Deze verklaring legt uit hoe wij persoonsgegevens verwerken wanneer u deze website bezoekt of een demo aanvraagt.`,
         "Wij verwerken gegevens volgens de Algemene Verordening Gegevensbescherming (AVG) en de Belgische wet van 30 juli 2018.",
       ],
     },
@@ -134,7 +134,7 @@ export const cookiesNl: LegalDoc = {
     {
       heading: "1. Inleiding",
       paragraphs: [
-        `Deze cookieverklaring hoort bij de website van ${productName}, een product van ${legalName}. Ze legt uit welke cookies wij plaatsen en waarom.`,
+        `Deze cookieverklaring hoort bij de website van ${productName}. Ze legt uit welke cookies wij plaatsen en waarom.`,
         "Lees ook de {{privacy}}.",
       ],
     },
@@ -201,20 +201,20 @@ export const termsNl: LegalDoc = {
     {
       heading: "1. Wie wij zijn",
       paragraphs: [
-        `${productName} is een product van ${legalName}, met zetel te ${addressNl}, BTW ${vat}. Contact: ${email}, ${phoneDisplay}.`,
+        `${legalName}, met zetel te ${addressNl}, BTW ${vat}. Contact: ${email}, ${phoneDisplay}.`,
       ],
     },
     {
       heading: "2. Toepasselijkheid",
       paragraphs: [
-        "Deze voorwaarden gelden voor het gebruik van deze website, het aanvragen van een demo en, voor zover hieronder beschreven, het latere gebruik van Propmaat. Afwijkingen gelden alleen als wij die schriftelijk bevestigen.",
+        "Deze voorwaarden gelden voor het gebruik van deze website, het aanvragen van een demo en, voor zover hieronder beschreven, het latere gebruik van ImmoCRM. Afwijkingen gelden alleen als wij die schriftelijk bevestigen.",
         "Bij een betaald abonnement of maatwerkafspraak kunnen wij een aparte overeenkomst of offerte laten tekenen. Die gaat boven deze pagina als ze elkaar tegenspreken.",
       ],
     },
     {
       heading: "3. De dienst",
       paragraphs: [
-        "Propmaat is software voor makelaarskantoren: panddossier, deals, inbox, agenda en de koppelingen die wij op de site beschrijven. De website is informatief. Een demo is vrijblijvend en geeft geen automatisch recht op een account.",
+        "ImmoCRM is software voor makelaarskantoren: panddossier, deals, inbox, agenda en de koppelingen die wij op de site beschrijven. De website is informatief. Een demo is vrijblijvend en geeft geen automatisch recht op een account.",
         "Functies, prijzen en planning kunnen wij aanpassen. Wat in een getekende offerte of overeenkomst staat, prevaleert.",
       ],
     },
@@ -228,27 +228,27 @@ export const termsNl: LegalDoc = {
     {
       heading: "5. Prijzen en betaling",
       paragraphs: [
-        "De publieke prijzen staan op {{prijzen}}: Basis vanaf €35 per seat per maand, Propmaat €50 per seat per maand, of een prijs op maat. Prijzen zijn exclusief btw, tenzij wij anders vermelden.",
+        "De publieke prijzen staan op {{prijzen}}: €140 per maand voor de eerste gebruiker, daarna €40 per extra gebruiker, of een prijs op maat. Prijzen zijn exclusief btw, tenzij wij anders vermelden.",
         "Facturatie, betaaltermijn en opzegging spreken wij af in de overeenkomst. Bij laattijdige betaling mogen wij de toegang opschorten na een herinnering.",
       ],
     },
     {
       heading: "6. Accounts van derden",
       paragraphs: [
-        "Immoweb, WhatsApp, mail en vergelijkbare diensten vragen hun eigen accounts en voorwaarden. Propmaat koppelt ze; wij zijn niet verantwoordelijk voor die diensten zelf, hun storingen of hun prijzen.",
+        "Immoweb, WhatsApp, mail en vergelijkbare diensten vragen hun eigen accounts en voorwaarden. ImmoCRM koppelt ze; wij zijn niet verantwoordelijk voor die diensten zelf, hun storingen of hun prijzen.",
       ],
     },
     {
       heading: "7. Uw gegevens in de software",
       paragraphs: [
-        "Als u klant wordt, blijft u verantwoordelijk voor de data die u in Propmaat zet (panden, klanten, berichten). U garandeert dat u die data mag verwerken. Wij treden dan op als verwerker voor die klantdata, volgens de AVG en een verwerkersafspraak.",
+        "Als u klant wordt, blijft u verantwoordelijk voor de data die u in ImmoCRM zet (panden, klanten, berichten). U garandeert dat u die data mag verwerken. Wij treden dan op als verwerker voor die klantdata, volgens de AVG en een verwerkersafspraak.",
         "Gegevens uit het demoformulier vallen onder de {{privacy}}.",
       ],
     },
     {
       heading: "8. Intellectuele eigendom",
       paragraphs: [
-        "De merknaam Propmaat, de software, teksten, beelden en het ontwerp van deze site blijven van Turbo Turtle BV of haar licentiegevers. U krijgt geen eigendom, alleen het gebruiksrecht dat in de overeenkomst staat.",
+        "De merknaam ImmoCRM, de software, teksten, beelden en het ontwerp van deze site blijven van ImmoCRM of haar licentiegevers. U krijgt geen eigendom, alleen het gebruiksrecht dat in de overeenkomst staat.",
         "U mag geen reverse engineering, scraping of wederverkoop doen, tenzij de wet dat toestaat.",
       ],
     },
@@ -256,7 +256,7 @@ export const termsNl: LegalDoc = {
       heading: "9. Aansprakelijkheid",
       paragraphs: [
         "De website en de demo zijn 'as is'. Wij streven naar juiste informatie, maar de site kan onvolledig zijn.",
-        "Onze aansprakelijkheid voor de betaalde dienst is, voor zover de wet dat toelaat, beperkt tot het bedrag dat u in de twaalf maanden daarvoor voor Propmaat betaalde. Wij zijn niet aansprakelijk voor indirecte schade, gederfde winst of dataverlies, behalve bij opzet of zware fout.",
+        "Onze aansprakelijkheid voor de betaalde dienst is, voor zover de wet dat toelaat, beperkt tot het bedrag dat u in de twaalf maanden daarvoor voor ImmoCRM betaalde. Wij zijn niet aansprakelijk voor indirecte schade, gederfde winst of dataverlies, behalve bij opzet of zware fout.",
         "Niets in deze voorwaarden beperkt aansprakelijkheid die de wet niet toelaat uit te sluiten.",
       ],
     },
@@ -269,7 +269,7 @@ export const termsNl: LegalDoc = {
     {
       heading: "11. Toepasselijk recht",
       paragraphs: [
-        "Op deze voorwaarden geldt Belgisch recht. Geschillen horen bij de rechtbanken van het arrondissement Gent, onverminderd dwingend consumentenrecht als dat van toepassing zou zijn. Propmaat richt zich op professionele makelaarskantoren.",
+        "Op deze voorwaarden geldt Belgisch recht. Geschillen horen bij de rechtbanken van het arrondissement Gent, onverminderd dwingend consumentenrecht als dat van toepassing zou zijn. ImmoCRM richt zich op professionele makelaarskantoren.",
       ],
     },
     {

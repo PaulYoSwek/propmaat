@@ -28,7 +28,7 @@ export function CrmPreview({ label }: { label: string }) {
     <figure className="flow-video">
       <video
         ref={videoRef}
-        src="/brand/flow.mp4"
+        src="/brand/immocrm-showcase.mp4"
         autoPlay
         muted
         loop

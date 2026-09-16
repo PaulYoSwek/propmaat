@@ -19,7 +19,7 @@ export function SiteHeader({
         <Link
           href={localizedPath(locale, "home")}
           className="min-w-0 shrink-0 text-ink"
-          aria-label="Propmaat"
+          aria-label="ImmoCRM"
         >
           <PropmaatWordmark />
         </Link>

@@ -1,6 +1,6 @@
-# Propmaat
+# ImmoCRM
 
-Marketing site for Propmaat, a CRM for estate agents in Belgium and the Netherlands.
+Marketing site for ImmoCRM, a CRM for estate agents in Belgium and the Netherlands.
 
 ## Stack
 
@@ -25,7 +25,7 @@ Set these in `.env.local` to forward demo requests:
 ```
 RESEND_API_KEY=
 CONTACT_EMAIL=
-CONTACT_FROM=Propmaat <onboarding@resend.dev>
+CONTACT_FROM=ImmoCRM <onboarding@resend.dev>
 ```
 
 Without them the form still succeeds and logs the request to the server console.

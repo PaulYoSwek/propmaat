@@ -117,6 +117,7 @@ export const en: Dictionary = {
         headline: "WhatsApp in the same flow — AI helps write, never sends.",
         body: "Conversations stay with the person and the file. Templates help; AI may rewrite a message, but never sends on its own.",
         shot: "/brand/automation-whatsapp.webp",
+        video: "/brand/automation-whatsapp.mp4",
         shotAlt: "WhatsApp inbox with a conversation, flow, and draft message",
       },
       {
@@ -125,6 +126,7 @@ export const en: Dictionary = {
         headline: "Website enquiries become a work queue, not inbox noise.",
         body: "A sale, valuation, search, or message lands as an open item. You pick it up by mail or WhatsApp from the same dossier.",
         shot: "/brand/automation-website.webp",
+        video: "/brand/automation-website.mp4",
         shotAlt: "Website inbox with open enquiries, types, and replies",
       },
       {
@@ -133,6 +135,7 @@ export const en: Dictionary = {
         headline: "A planner of your own: everyone votes, you book.",
         body: "Buyers, sellers, and the office see the same slots and vote on a time. No back-and-forth mail. The chosen moment lands in your calendar, on the listing.",
         shot: "/brand/automation-agenda.webp",
+        video: "/brand/automation-agenda.mp4",
         shotAlt: "Weekly calendar with viewings, CRM appointments, and a linked calendar",
       },
       {
@@ -141,6 +144,7 @@ export const en: Dictionary = {
         headline: "Write together, keep the history, sign when it is right.",
         body: "Several parties work in the same document. Every change stays visible. When everyone is happy, you sign from the file — no more mailing versions around.",
         shot: "/brand/automation-signing.webp",
+        video: "/brand/automation-signing.mp4",
         shotAlt: "Collaboration file with document, comments, and timeline",
       },
     ],

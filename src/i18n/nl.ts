@@ -118,6 +118,7 @@ export const nl = {
         headline: "WhatsApp in dezelfde flow — AI schrijft mee, stuurt nooit.",
         body: "Gesprekken blijven bij de persoon en het dossier. Sjablonen helpen; AI mag een tekst herschrijven, maar verstuurt niets zelf.",
         shot: "/brand/automation-whatsapp.webp",
+        video: "/brand/automation-whatsapp.mp4",
         shotAlt: "WhatsApp-inbox met gesprek, flow en conceptbericht",
       },
       {
@@ -126,6 +127,7 @@ export const nl = {
         headline: "Website-aanvragen worden werkvoorraad, geen mailbox-chaos.",
         body: "Verkoop, schatting, zoekopdracht of bericht: het komt binnen als een open item. Je pakt het op via mail of WhatsApp, vanuit hetzelfde dossier.",
         shot: "/brand/automation-website.webp",
+        video: "/brand/automation-website.mp4",
         shotAlt: "Website-inbox met openstaande aanvragen, types en antwoorden",
       },
       {
@@ -134,6 +136,7 @@ export const nl = {
         headline: "Een eigen planner: iedereen stemt, jij plant.",
         body: "Koper, verkoper en het kantoor zien dezelfde voorstellen en stemmen op een tijdstip. Geen heen-en-weer mailen. Het gekozen moment landt in je agenda, bij het pand.",
         shot: "/brand/automation-agenda.webp",
+        video: "/brand/automation-agenda.mp4",
         shotAlt: "Weekagenda met bezichtigingen, CRM-afspraken en gekoppelde kalender",
       },
       {
@@ -142,6 +145,7 @@ export const nl = {
         headline: "Samen schrijven, geschiedenis bewaren, tekenen als het klopt.",
         body: "Meerdere partijen werken in hetzelfde document. Elke wijziging blijft zichtbaar. Als iedereen tevreden is, teken je vanuit het dossier — geen versies meer heen-en-weer mailen.",
         shot: "/brand/automation-signing.webp",
+        video: "/brand/automation-signing.mp4",
         shotAlt: "Samenwerkingsdossier met document, reacties en tijdlijn",
       },
     ],

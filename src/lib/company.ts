@@ -11,4 +11,5 @@ export const company = {
   email: "info@turboturtle.nl",
   phoneDisplay: "+31 6 3496 5518",
   phoneTel: "+31634965518",
+  appUrl: "https://www.immocrmapp.be",
 } as const;

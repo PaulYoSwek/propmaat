@@ -58,6 +58,7 @@ export const nl = {
     faq: "FAQ",
     contact: "Contact",
     demo: "Vraag een demo",
+    login: "Inloggen",
     language: "Taal",
     menu: "Menu",
     close: "Sluit menu",

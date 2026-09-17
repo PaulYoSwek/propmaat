@@ -57,6 +57,7 @@ export const en: Dictionary = {
     faq: "FAQ",
     contact: "Contact",
     demo: "Request a demo",
+    login: "Log in",
     language: "Language",
     menu: "Menu",
     close: "Close menu",

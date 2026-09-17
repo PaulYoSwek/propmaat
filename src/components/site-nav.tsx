@@ -7,9 +7,10 @@ import type { Locale } from "@/i18n/config";
 import { localizedPath, pathToKey } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/nl";
 import { isActiveNav, mainNavItems } from "@/lib/site-nav";
+import { company } from "@/lib/company";
 import { HeaderDemo } from "./header-demo";
 import { LanguageToggle } from "./language-toggle";
-import { primaryButtonClass } from "./ui";
+import { primaryButtonClass, secondaryButtonClass } from "./ui";
 
 export function SiteNav({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const pathname = usePathname() || "/";
@@ -59,6 +60,12 @@ export function SiteNav({ locale, dict }: { locale: Locale; dict: Dictionary }) 
       </nav>
       <div className="flex items-center gap-3">
         <LanguageToggle locale={locale} />
+        <a
+          href={company.appUrl}
+          className="hidden min-h-11 items-center justify-center rounded-full border border-line bg-transparent px-4 py-2.5 text-sm font-medium text-muted transition-colors hover:border-line hover:bg-surface hover:text-ink lg:inline-flex"
+        >
+          {dict.nav.login}
+        </a>
         <HeaderDemo
           href={localizedPath(locale, "contact")}
           label={dict.nav.demo}
@@ -103,12 +110,17 @@ export function SiteNav({ locale, dict }: { locale: Locale; dict: Dictionary }) 
               </Link>
             ))}
           </nav>
-          <Link
-            href={localizedPath(locale, "contact")}
-            className={primaryButtonClass("mt-4 w-full")}
-          >
-            {dict.nav.demo}
-          </Link>
+          <div className="mt-4 flex flex-col gap-2">
+            <a href={company.appUrl} className={secondaryButtonClass("w-full")}>
+              {dict.nav.login}
+            </a>
+            <Link
+              href={localizedPath(locale, "contact")}
+              className={primaryButtonClass("w-full")}
+            >
+              {dict.nav.demo}
+            </Link>
+          </div>
         </div>
       ) : null}
     </>

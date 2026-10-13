@@ -1,0 +1,39 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "immocrm-site",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "port": 3000,
+      "autoPort": true
+    },
+    {
+      "name": "immocrm-crm",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--prefix",
+        "D:/Projects/oko-vastgoed-crm"
+      ],
+      "port": 3000,
+      "autoPort": false
+    },
+    {
+      "name": "immocrm-office-website",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--prefix",
+        "D:/Projects/oko-vastgoed-crm/website"
+      ],
+      "port": 3001,
+      "autoPort": false
+    }
+  ]
+}

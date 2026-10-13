@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { ChannelBadge, type ChannelId } from "./channel-icon";
 import { PropmaatPinImage } from "./propmaat-pin-image";
+import { VideoLightbox } from "./video-lightbox";
 import { Container, Eyebrow } from "@/components/ui";
 import {
   AUTOMATION_OPEN_EVENT,
@@ -26,10 +27,14 @@ function AutomationMedia({
   video,
   poster,
   alt,
+  openLabel,
+  closeLabel,
 }: {
   video?: string;
   poster?: string;
   alt: string;
+  openLabel: string;
+  closeLabel: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -55,18 +60,25 @@ function AutomationMedia({
   return (
     <div className="automation-shot overflow-hidden rounded-xl border border-line bg-surface">
       {video ? (
-        <video
-          ref={videoRef}
+        <VideoLightbox
           src={video}
           poster={poster}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          aria-label={alt}
-          className="block h-auto w-full"
-        />
+          label={`${openLabel}: ${alt}`}
+          closeLabel={closeLabel}
+        >
+          <video
+            ref={videoRef}
+            src={video}
+            poster={poster}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label={alt}
+            className="block h-auto w-full"
+          />
+        </VideoLightbox>
       ) : (
         <img
           src={poster}
@@ -92,12 +104,16 @@ export function AutomationSection({
   lead,
   shotHint,
   channels,
+  videoOpen,
+  videoClose,
 }: {
   title: string;
   heading: string;
   lead: string;
   shotHint: string;
   channels: AutomationChannel[];
+  videoOpen: string;
+  videoClose: string;
 }) {
   const uid = useId();
   const [activeId, setActiveId] = useState<ChannelId>(channels[0].id);
@@ -222,6 +238,8 @@ export function AutomationSection({
               video={active.video}
               poster={active.shot}
               alt={active.shotAlt ?? active.label}
+              openLabel={videoOpen}
+              closeLabel={videoClose}
             />
           ) : (
             <div

@@ -14,6 +14,13 @@ export const CATALOG_ICONS = [
   "staging",
   "team",
   "language",
+  "dashboard",
+  "map",
+  "task",
+  "finance",
+  "chart",
+  "document",
+  "shield",
 ] as const;
 
 export type CatalogIconId = (typeof CATALOG_ICONS)[number];
@@ -240,6 +247,97 @@ function iconPath(id: CatalogIconId) {
             d="M5 10h14M5 14h14M12 4c2 2.8 3 5.4 3 8s-1 5.2-3 8c-2-2.8-3-5.4-3-8s1-5.2 3-8Z"
             stroke="currentColor"
             strokeWidth="1.6"
+          />
+        </>
+      );
+    case "dashboard":
+      return (
+        <>
+          <rect x="3.5" y="4" width="7.5" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+          <rect x="13" y="4" width="7.5" height="4.5" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+          <rect x="13" y="10.5" width="7.5" height="9.5" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+          <rect x="3.5" y="13" width="7.5" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+        </>
+      );
+    case "map":
+      return (
+        <>
+          <path
+            d="M12 20.5s-5.5-5.2-5.5-10a5.5 5.5 0 0 1 11 0c0 4.8-5.5 10-5.5 10Z"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinejoin="round"
+          />
+          <circle cx="12" cy="10.5" r="2" stroke="currentColor" strokeWidth="1.6" />
+        </>
+      );
+    case "task":
+      return (
+        <>
+          <rect x="4.5" y="4.5" width="15" height="15" rx="2" stroke="currentColor" strokeWidth="1.6" />
+          <path
+            d="m8.5 12 2.3 2.3 4.7-5"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </>
+      );
+    case "finance":
+      return (
+        <>
+          <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.6" />
+          <path
+            d="M14.6 9.4a3 3 0 0 0-5.1 1.3M14.6 14.6a3 3 0 0 1-5.1-1.3M8 11h6M8 13h6"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+          />
+        </>
+      );
+    case "chart":
+      return (
+        <>
+          <path d="M4 19.5h16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <rect x="6" y="11" width="3" height="6" rx="0.8" stroke="currentColor" strokeWidth="1.6" />
+          <rect x="10.5" y="6" width="3" height="11" rx="0.8" stroke="currentColor" strokeWidth="1.6" />
+          <rect x="15" y="9" width="3" height="8" rx="0.8" stroke="currentColor" strokeWidth="1.6" />
+        </>
+      );
+    case "document":
+      return (
+        <>
+          <path
+            d="M7.5 3.5h6L18 8v11a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19V5a1.5 1.5 0 0 1 1.5-1.5Z"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M13.5 3.5V8H18M9 12h6M9 15.5h6"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </>
+      );
+    case "shield":
+      return (
+        <>
+          <path
+            d="M12 3.5 5.5 6v5.5c0 4 2.8 7.3 6.5 9 3.7-1.7 6.5-5 6.5-9V6L12 3.5Z"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m9.3 12 1.9 1.9 3.6-3.9"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       );

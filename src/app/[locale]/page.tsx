@@ -71,7 +71,11 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                 <HeroChannels items={home.heroChannels} />
               </div>
             </div>
-            <CrmPreview label={home.productPreviewLabel} />
+            <CrmPreview
+              label={home.productPreviewLabel}
+              openLabel={home.videoOpen}
+              closeLabel={home.videoClose}
+            />
           </div>
         </Container>
       </section>
@@ -82,6 +86,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         lead={home.automationLead}
         shotHint={home.automationShotHint}
         channels={home.automationChannels}
+        videoOpen={home.videoOpen}
+        videoClose={home.videoClose}
       />
 
       <WhyUsSection

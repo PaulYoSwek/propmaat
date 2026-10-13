@@ -2,6 +2,8 @@
 
 Marketing site for ImmoCRM, a CRM for estate agents in Belgium and the Netherlands.
 
+The product itself lives in a separate repository (`oko-vastgoed-crm`: CRM, public office website, Supabase). All marketing copy is in `src/i18n/nl.ts` (source of truth) and `src/i18n/en.ts` (faithful translation). When the CRM gains a feature, update both dictionaries, add a mock in `src/components/mocks/product-mocks.tsx` for a new `features.sections` entry, and add an icon id in `src/components/brand/catalog-icon.tsx` if the catalog needs one.
+
 ## Stack
 
 Next.js 16, TypeScript, Tailwind CSS v4.
